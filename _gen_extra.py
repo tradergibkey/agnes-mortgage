@@ -327,6 +327,7 @@ if __name__ == "__main__":
     os.makedirs("blog/posts/images", exist_ok=True)
     P.build_index()
     P.build_all_services()
+    P.build_residential()
     P.build_remaining_services()
     build_about()
     legal_page("privacy-policy", "Privacy Policy | Agnes Mortgage",

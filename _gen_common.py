@@ -88,11 +88,12 @@ def lang_gate():
 """
 
 NAV_ITEMS = [
-    ("buy-to-let", ("Buy-to-Let & Portfolio", "Buy-to-Let & Portfolio", "Buy-to-Let y carteras", "Buy-to-let és portfólió")),
-    ("hmo-finance", ("HMO & Multi-Unit", "HMO & Mehrfamilienobjekte", "HMO y multiunidad", "HMO és többlakásos")),
-    ("expat-mortgages", ("Expat & Overseas", "Expats & Auslandskunden", "Expatriados y no residentes", "Külföldön élők")),
+    ("buy-to-let", ("Buy to Let", "Buy-to-Let", "Buy-to-Let", "Buy-to-let")),
+    ("hmo-finance", ("HMO & Multi-Unit Block", "HMO & Mehrfamilienblock", "HMO y bloque multiunidad", "HMO és többlakásos tömb")),
+    ("expat-mortgages", ("Expat & Foreign National", "Expats & Ausländer", "Expatriados y extranjeros", "Külföldiek és expatok")),
     ("self-employed", ("Directors & Self-Employed", "Unternehmer & Selbständige", "Directores y autónomos", "Cégvezetők és vállalkozók")),
     ("high-net-worth", ("High-Net-Worth & Large Loans", "Vermögende Kunden & Großdarlehen", "Grandes patrimonios y préstamos", "Nagy vagyon és nagy hitelek")),
+    ("residential", ("Residential Mortgages", "Wohnimmobilien-Hypotheken", "Hipotecas residenciales", "Lakóingatlan-jelzáloghitelek")),
     ("remortgage", ("Remortgage & Refinance", "Umschuldung & Refinanzierung", "Rehipoteca y refinanciación", "Hitelkiváltás és refinanszírozás")),
 ]
 

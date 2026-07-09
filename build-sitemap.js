@@ -17,6 +17,7 @@ const STATIC_PAGES = [
   { loc: "/expat-mortgages", priority: "0.9", changefreq: "monthly" },
   { loc: "/self-employed", priority: "0.9", changefreq: "monthly" },
   { loc: "/high-net-worth", priority: "0.9", changefreq: "monthly" },
+  { loc: "/residential", priority: "0.9", changefreq: "monthly" },
   { loc: "/remortgage", priority: "0.9", changefreq: "monthly" },
   { loc: "/about", priority: "0.8", changefreq: "monthly" },
   { loc: "/blog", priority: "0.8", changefreq: "weekly" },
