@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agnes-mortgage.vercel.app/sitemap.xml
+Llms-txt: https://agnes-mortgage.vercel.app/llms.txt

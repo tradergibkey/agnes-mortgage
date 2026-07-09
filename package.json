@@ -1,0 +1,9 @@
+{
+  "name": "agnes-mortgage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agnes Mortgage - static site build scripts",
+  "scripts": {
+    "build": "node build-sitemap.js"
+  }
+}
