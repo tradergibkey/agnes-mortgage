@@ -3,6 +3,12 @@
   "use strict";
   var LANGS = ["en", "de", "es", "hu"];
   var LANG_NAMES = { en: "English", de: "Deutsch", es: "Español", hu: "Magyar" };
+  var FLAG_SVG = {
+    en: '<svg class="flag lang-flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#012169"/><path d="M0,0 60,42 M60,0 0,42" stroke="#fff" stroke-width="8"/><path d="M0,0 60,42 M60,0 0,42" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V42 M0,21 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V42 M0,21 H60" stroke="#C8102E" stroke-width="7"/></svg>',
+    de: '<svg class="flag lang-flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#000"/><rect y="14" width="60" height="14" fill="#DD0000"/><rect y="28" width="60" height="14" fill="#FFCE00"/></svg>',
+    es: '<svg class="flag lang-flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#AA151B"/><rect y="10.5" width="60" height="21" fill="#F1BF00"/></svg>',
+    hu: '<svg class="flag lang-flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#CE2939"/><rect y="14" width="60" height="14" fill="#fff"/><rect y="28" width="60" height="14" fill="#477050"/></svg>'
+  };
 
   /* ---------- Language system (data-attribute toggle) ---------- */
   function currentLang() {
@@ -26,6 +32,12 @@
     });
     var label = document.querySelector(".lang-btn .lang-label");
     if (label) label.textContent = lang.toUpperCase();
+    var flagSlot = document.querySelector(".lang-btn .lang-flag");
+    if (flagSlot && FLAG_SVG[lang]) {
+      var tmp = document.createElement("div");
+      tmp.innerHTML = FLAG_SVG[lang];
+      flagSlot.replaceWith(tmp.firstChild);
+    }
     try { localStorage.setItem("am-lang", lang); } catch (e) {}
   }
 

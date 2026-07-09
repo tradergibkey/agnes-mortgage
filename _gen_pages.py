@@ -123,7 +123,7 @@ def build_index():
         <a href="/about" class="btn btn-ghost">{t("span", "Meet your adviser", "Ihre Beraterin", "Conozca a su asesora", "Ismerje meg tanácsadóját")}</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><b>90+</b>{t("span", "lenders across the market", "Kreditgeber am Markt", "prestamistas en el mercado", "hitelező a piacon")}</div>
+        <div class="hero-stat"><b>200+</b>{t("span", "lenders across the market", "Kreditgeber am Markt", "prestamistas en el mercado", "hitelező a piacon")}</div>
         <div class="hero-stat"><b>4</b>{t("span", "languages of advice", "Beratungssprachen", "idiomas de asesoría", "nyelven elérhető tanácsadás")}</div>
         <div class="hero-stat"><b>UK</b>{t("span", "nationwide coverage", "landesweite Abdeckung", "cobertura nacional", "országos lefedettség")}</div>
       </div>
@@ -143,7 +143,7 @@ def build_index():
   <div class="container">
     <div class="section-head reveal-item">
       {t("span", "What we arrange", "Unsere Leistungen", "Qué gestionamos", "Amivel foglalkozunk", cls="eyebrow")}
-      {t("h2", "Six specialisms. One standard: bespoke.", "Sechs Spezialgebiete. Ein Standard: maßgeschneidert.", "Seis especialidades. Un estándar: a medida.", "Hat szakterület. Egy mérce: az egyedi megoldás.")}
+      {t("h2", "Seven specialisms. One standard: bespoke.", "Sieben Spezialgebiete. Ein Standard: maßgeschneidert.", "Siete especialidades. Un estándar: a medida.", "Hét szakterület. Egy mérce: az egyedi megoldás.")}
       {t("p", "We deliberately serve a narrow clientele so the depth of expertise stays exceptional in every case we take on.",
          "Wir betreuen bewusst eine ausgewählte Klientel, damit die Expertise in jedem Fall außergewöhnlich bleibt.",
          "Atendemos deliberadamente a una clientela selecta para que la profundidad de la experiencia sea excepcional en cada caso.",

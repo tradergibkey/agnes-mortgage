@@ -63,10 +63,10 @@ def build_about():
     <div class="grid-3">
       <div class="step reveal-item"><div class="step-num">I</div>
         {t("h3", "Whole of market, no shortcuts", "Gesamtmarkt, keine Abkürzungen", "Todo el mercado, sin atajos", "Teljes piac, rövidítések nélkül")}
-        {t("p", "Over 90 lenders, from global banks to private banks and specialist funds. The recommendation is driven by your case — never by a panel.",
-           "Über 90 Kreditgeber — von Großbanken über Privatbanken bis zu Spezialfonds. Die Empfehlung folgt Ihrem Fall, nie einer Vorauswahl.",
-           "Más de 90 prestamistas, desde grandes bancos hasta banca privada y fondos especializados. La recomendación la dicta su caso, nunca un panel.",
-           "Több mint 90 hitelező — a nagybankoktól a privátbankokon át a speciális alapokig. Az ajánlást az Ön ügye vezérli, sosem egy előre szűkített lista.")}</div>
+        {t("p", "Over 200 lenders, from global banks to private banks and specialist funds. The recommendation is driven by your case — never by a panel.",
+           "Über 200 Kreditgeber — von Großbanken über Privatbanken bis zu Spezialfonds. Die Empfehlung folgt Ihrem Fall, nie einer Vorauswahl.",
+           "Más de 200 prestamistas, desde grandes bancos hasta banca privada y fondos especializados. La recomendación la dicta su caso, nunca un panel.",
+           "Több mint 200 hitelező — a nagybankoktól a privátbankokon át a speciális alapokig. Az ajánlást az Ön ügye vezérli, sosem egy előre szűkített lista.")}</div>
       <div class="step reveal-item"><div class="step-num">II</div>
         {t("h3", "Discretion as default", "Diskretion als Standard", "Discreción por defecto", "Diszkréció alapból")}
         {t("p", "Financial details stay between us and the lender that needs them. No data selling, no marketing lists, no exceptions.",
