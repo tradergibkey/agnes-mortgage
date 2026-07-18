@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Mortgage Calculators — Repayment, Borrowing, Stamp Duty, Buy-to-Let | Agnes Mortgage</title>
+<meta name="description" content="Free UK mortgage tools: monthly repayment calculator, how much can I borrow, stamp duty (SDLT) calculator and buy-to-let rental cover — instant results.">
+<link rel="canonical" href="https://agnes-mortgage.vercel.app/calculators">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UK Mortgage Calculators — Repayment, Borrowing, Stamp Duty, Buy-to-Let | Agnes Mortgage">
+<meta property="og:description" content="Free UK mortgage tools: monthly repayment calculator, how much can I borrow, stamp duty (SDLT) calculator and buy-to-let rental cover — instant results.">
+<meta property="og:url" content="https://agnes-mortgage.vercel.app/calculators">
+<meta property="og:image" content="https://agnes-mortgage.vercel.app/img/og-cover.jpg">
+<meta property="og:site_name" content="Agnes Mortgage">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="GB">
+<meta name="geo.placename" content="United Kingdom">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://agnes-mortgage.vercel.app"},
+{"@type":"ListItem","position":2,"name":"Calculators","item":"https://agnes-mortgage.vercel.app/calculators"}]}
+</script>
+</head>
+<body>
+<div class="lang-gate hidden" id="langGate">
+  <div class="lang-gate-card">
+    <div class="brand" style="justify-content:center"><span class="brand-mark">AM</span><span>Agnes Mortgage</span></div>
+    <h2>Welcome · Willkommen · Bienvenido · Üdvözöljük</h2>
+    <p>Please choose your language / Bitte wählen Sie Ihre Sprache / Elija su idioma / Kérjük, válasszon nyelvet</p>
+    <div class="lang-gate-grid">
+      <button data-lang="en"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#012169"/><path d="M0,0 60,42 M60,0 0,42" stroke="#fff" stroke-width="8"/><path d="M0,0 60,42 M60,0 0,42" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V42 M0,21 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V42 M0,21 H60" stroke="#C8102E" stroke-width="7"/></svg> English</button>
+      <button data-lang="de"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#000"/><rect y="14" width="60" height="14" fill="#DD0000"/><rect y="28" width="60" height="14" fill="#FFCE00"/></svg> Deutsch</button>
+      <button data-lang="es"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#AA151B"/><rect y="10.5" width="60" height="21" fill="#F1BF00"/></svg> Español</button>
+      <button data-lang="hu"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#CE2939"/><rect y="14" width="60" height="14" fill="#fff"/><rect y="28" width="60" height="14" fill="#477050"/></svg> Magyar</button>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand" aria-label="Agnes Mortgage — home">
+      <span class="brand-mark">AM</span>
+      <span>Agnes Mortgage<small data-en="Private mortgage broker" data-de="Privater Hypothekenmakler" data-es="Bróker hipotecario privado" data-hu="Privát jelzálogbróker">Private mortgage broker</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="main-nav">
+        <li><a href="/" data-en="Home" data-de="Start" data-es="Inicio" data-hu="Kezdőlap">Home</a></li>
+        <li class="nav-item-drop">
+          <button class="drop-toggle" type="button"><span data-en="Services" data-de="Leistungen" data-es="Servicios" data-hu="Szolgáltatások">Services</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-drop">
+<a href="/residential" data-en="Residential Mortgages" data-de="Wohnimmobilien-Hypotheken" data-es="Hipotecas residenciales" data-hu="Lakóingatlan-jelzáloghitelek">Residential Mortgages</a>
+<a href="/remortgage" data-en="Remortgage &amp; Refinance" data-de="Umschuldung &amp; Refinanzierung" data-es="Rehipoteca y refinanciación" data-hu="Hitelkiváltás és refinanszírozás">Remortgage & Refinance</a>
+<a href="/buy-to-let" data-en="Buy to Let" data-de="Buy-to-Let" data-es="Buy-to-Let" data-hu="Buy-to-let">Buy to Let</a>
+<a href="/hmo-finance" data-en="HMO &amp; Multi-Unit Block" data-de="HMO &amp; Mehrfamilienblock" data-es="HMO y bloque multiunidad" data-hu="HMO és többlakásos tömb">HMO & Multi-Unit Block</a>
+<a href="/self-employed" data-en="Directors &amp; Self-Employed" data-de="Unternehmer &amp; Selbständige" data-es="Directores y autónomos" data-hu="Cégvezetők és vállalkozók">Directors & Self-Employed</a>
+<a href="/contractors" data-en="Contractors" data-de="Auftragnehmer" data-es="Contratistas" data-hu="Szerződéses vállalkozók">Contractors</a>
+<a href="/expat-mortgages" data-en="Expat &amp; Foreign National" data-de="Expats &amp; Ausländer" data-es="Expatriados y extranjeros" data-hu="Külföldiek és expatok">Expat & Foreign National</a>
+<a href="/high-net-worth" data-en="High-Net-Worth &amp; Large Loans" data-de="Vermögende Kunden &amp; Großdarlehen" data-es="Grandes patrimonios y préstamos" data-hu="Nagy vagyon és nagy hitelek">High-Net-Worth & Large Loans</a>
+          </div>
+        </li>
+        <li><a href="/calculators" class="active" data-en="Calculators" data-de="Rechner" data-es="Calculadoras" data-hu="Kalkulátorok">Calculators</a></li>
+        <li><a href="/about" data-en="Meet Agnes" data-de="Über Agnes" data-es="Conozca a Agnes" data-hu="Ismerje meg Agnest">Meet Agnes</a></li>
+        <li><a href="/blog" data-en="Insights" data-de="Insights" data-es="Blog" data-hu="Blog">Insights</a></li>
+        <li><a href="/#contact" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-hu="Kapcsolat">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <div class="lang-switch">
+        <button class="lang-btn" type="button"><svg class="flag lang-flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#012169"/><path d="M0,0 60,42 M60,0 0,42" stroke="#fff" stroke-width="8"/><path d="M0,0 60,42 M60,0 0,42" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V42 M0,21 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V42 M0,21 H60" stroke="#C8102E" stroke-width="7"/></svg><span class="lang-label">EN</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="lang-menu">
+          <button data-lang="en"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#012169"/><path d="M0,0 60,42 M60,0 0,42" stroke="#fff" stroke-width="8"/><path d="M0,0 60,42 M60,0 0,42" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V42 M0,21 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V42 M0,21 H60" stroke="#C8102E" stroke-width="7"/></svg> English</button>
+          <button data-lang="de"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#000"/><rect y="14" width="60" height="14" fill="#DD0000"/><rect y="28" width="60" height="14" fill="#FFCE00"/></svg> Deutsch</button>
+          <button data-lang="es"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="42" fill="#AA151B"/><rect y="10.5" width="60" height="21" fill="#F1BF00"/></svg> Español</button>
+          <button data-lang="hu"><svg class="flag" viewBox="0 0 60 42"><rect width="60" height="14" fill="#CE2939"/><rect y="14" width="60" height="14" fill="#fff"/><rect y="28" width="60" height="14" fill="#477050"/></svg> Magyar</button>
+        </div>
+      </div>
+      <a href="/#contact" class="btn btn-primary btn-sm"><span data-en="Get in touch" data-de="Kontakt" data-es="Contactar" data-hu="Kapcsolat">Get in touch</span></a>
+      <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/" data-en="Home" data-de="Start" data-es="Inicio" data-hu="Kezdőlap">Home</a><span>›</span><span data-en="Calculators" data-de="Rechner" data-es="Calculadoras" data-hu="Kalkulátorok">Calculators</span></div>
+    <h1 data-en="Mortgage calculators" data-de="Hypothekenrechner" data-es="Calculadoras hipotecarias" data-hu="Jelzálog-kalkulátorok">Mortgage calculators</h1>
+    <p data-en="Instant estimates as you type — repayments, borrowing power, stamp duty and buy-to-let cover. Figures are illustrations, not offers; your exact numbers depend on lender criteria." data-de="Sofortige Schätzungen während der Eingabe — Raten, Kreditrahmen, Grunderwerbsteuer und Buy-to-Let-Deckung. Die Zahlen sind Beispiele, keine Angebote." data-es="Estimaciones instantáneas mientras escribe — cuotas, capacidad de préstamo, impuesto de transmisiones y cobertura buy-to-let. Las cifras son ilustrativas, no ofertas." data-hu="Azonnali becslések gépelés közben — törlesztő, hitelkeret, illeték és buy-to-let fedezettség. A számok tájékoztató jellegűek, nem ajánlatok.">Instant estimates as you type — repayments, borrowing power, stamp duty and buy-to-let cover. Figures are illustrations, not offers; your exact numbers depend on lender criteria.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-tabs reveal-item">
+      <button class="calc-tab active" data-panel="repay" data-en="Monthly repayment" data-de="Monatliche Rate" data-es="Cuota mensual" data-hu="Havi törlesztő">Monthly repayment</button>
+      <button class="calc-tab" data-panel="borrow" data-en="How much can I borrow?" data-de="Wie viel kann ich leihen?" data-es="¿Cuánto puedo pedir?" data-hu="Mennyit kaphatok?">How much can I borrow?</button>
+      <button class="calc-tab" data-panel="sdlt" data-en="Stamp duty (SDLT)" data-de="Grunderwerbsteuer (SDLT)" data-es="Impuesto SDLT" data-hu="Illeték (SDLT)">Stamp duty (SDLT)</button>
+      <button class="calc-tab" data-panel="btl" data-en="Buy-to-let cover" data-de="Buy-to-Let-Deckung" data-es="Cobertura buy-to-let" data-hu="Buy-to-let fedezet">Buy-to-let cover</button>
+    </div>
+
+    <!-- ============ REPAYMENT ============ -->
+    <div class="calc-panel active" id="panel-repay">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label><span data-en="Loan amount" data-de="Darlehensbetrag" data-es="Importe del préstamo" data-hu="Hitelösszeg">Loan amount</span><output id="repay-amount-out">£250,000</output></label>
+            <input type="range" id="repay-amount" min="25000" max="3000000" step="5000" value="250000">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Interest rate (% per year)" data-de="Zinssatz (% pro Jahr)" data-es="Tipo de interés (% anual)" data-hu="Kamatláb (% évente)">Interest rate (% per year)</span><output id="repay-rate-out">4.5%</output></label>
+            <input type="range" id="repay-rate" min="0.5" max="12" step="0.05" value="4.5">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Term (years)" data-de="Laufzeit (Jahre)" data-es="Plazo (años)" data-hu="Futamidő (év)">Term (years)</span><output id="repay-term-out">25</output></label>
+            <input type="range" id="repay-term" min="5" max="40" step="1" value="25">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Repayment type" data-de="Tilgungsart" data-es="Tipo de amortización" data-hu="Törlesztés típusa">Repayment type</span></label>
+            <div class="calc-seg" id="repay-type"><button type="button" data-val="repayment" class="active" data-en="Capital repayment" data-de="Annuität" data-es="Amortización" data-hu="Tőke + kamat">Capital repayment</button><button type="button" data-val="io" data-en="Interest-only" data-de="Tilgungsfrei" data-es="Solo interés" data-hu="Csak kamat">Interest-only</button></div>
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          <h3 data-en="Estimated monthly payment" data-de="Geschätzte Monatsrate" data-es="Cuota mensual estimada" data-hu="Becsült havi törlesztő">Estimated monthly payment</h3>
+          <div class="calc-big" id="repay-big">£1,390</div>
+          <div class="calc-rows">
+            <div class="calc-row"><span data-en="Total repaid over term" data-de="Gesamtrückzahlung" data-es="Total devuelto" data-hu="Teljes visszafizetés">Total repaid over term</span><b id="repay-total">—</b></div>
+            <div class="calc-row"><span data-en="Total interest" data-de="Gesamtzinsen" data-es="Interés total" data-hu="Teljes kamat">Total interest</span><b id="repay-interest">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Illustration only. Assumes a constant rate for the whole term." data-de="Nur zur Veranschaulichung. Konstanter Zinssatz über die gesamte Laufzeit angenommen." data-es="Solo ilustrativo. Supone un tipo constante durante todo el plazo." data-hu="Csak illusztráció. A teljes futamidőre változatlan kamatot feltételez.">Illustration only. Assumes a constant rate for the whole term.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm"><span data-en="Get exact figures" data-de="Genaue Zahlen anfragen" data-es="Obtener cifras exactas" data-hu="Pontos számokat kérek">Get exact figures</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ BORROWING ============ -->
+    <div class="calc-panel" id="panel-borrow">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label><span data-en="Your annual income (before tax)" data-de="Ihr Jahreseinkommen (brutto)" data-es="Sus ingresos anuales (brutos)" data-hu="Éves jövedelme (bruttó)">Your annual income (before tax)</span><output id="borrow-inc1-out">£60,000</output></label>
+            <input type="range" id="borrow-inc1" min="10000" max="500000" step="1000" value="60000">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Second applicant income (optional)" data-de="Einkommen zweite Person (optional)" data-es="Ingresos del segundo titular (opcional)" data-hu="Második igénylő jövedelme (opcionális)">Second applicant income (optional)</span><output id="borrow-inc2-out">£0</output></label>
+            <input type="range" id="borrow-inc2" min="0" max="500000" step="1000" value="0">
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          <h3 data-en="Estimated borrowing range" data-de="Geschätzter Kreditrahmen" data-es="Rango de préstamo estimado" data-hu="Becsült hitelkeret">Estimated borrowing range</h3>
+          <div class="calc-big" id="borrow-big">£240,000 – £330,000</div>
+          <div class="calc-rows">
+            <div class="calc-row"><span data-en="Typical (4.5× income)" data-de="Typisch (4,5× Einkommen)" data-es="Típico (4,5× ingresos)" data-hu="Jellemző (4,5× jövedelem)">Typical (4.5× income)</span><b id="borrow-typ">—</b></div>
+            <div class="calc-row"><span data-en="Some lenders (up to 5.5×)" data-de="Einige Banken (bis 5,5×)" data-es="Algunos bancos (hasta 5,5×)" data-hu="Egyes bankok (akár 5,5×)">Some lenders (up to 5.5×)</span><b id="borrow-max">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Actual figures depend on outgoings, credit profile and lender criteria — complex income often supports more than the standard multiple." data-de="Tatsächliche Werte hängen von Ausgaben, Bonität und Bankkriterien ab — komplexes Einkommen ermöglicht oft mehr als das Standardvielfache." data-es="Las cifras reales dependen de gastos, perfil crediticio y criterios del banco — los ingresos complejos a menudo permiten más que el múltiplo estándar." data-hu="A tényleges összeg a kiadásoktól, hitelprofiltól és banki feltételektől függ — összetett jövedelem gyakran többet tesz lehetővé a szokásos szorzónál.">Actual figures depend on outgoings, credit profile and lender criteria — complex income often supports more than the standard multiple.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm"><span data-en="Check my real maximum" data-de="Mein echtes Maximum prüfen" data-es="Comprobar mi máximo real" data-hu="Valós maximumom ellenőrzése">Check my real maximum</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SDLT ============ -->
+    <div class="calc-panel" id="panel-sdlt">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label><span data-en="Purchase price" data-de="Kaufpreis" data-es="Precio de compra" data-hu="Vételár">Purchase price</span><output id="sdlt-price-out">£350,000</output></label>
+            <input type="range" id="sdlt-price" min="50000" max="3000000" step="5000" value="350000">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Buyer type" data-de="Käufertyp" data-es="Tipo de comprador" data-hu="Vásárló típusa">Buyer type</span></label>
+            <div class="calc-seg" id="sdlt-type"><button type="button" data-val="mover" class="active" data-en="Home mover" data-de="Umzügler" data-es="Comprador estándar" data-hu="Költöző">Home mover</button><button type="button" data-val="ftb" data-en="First-time buyer" data-de="Erstkäufer" data-es="Primer comprador" data-hu="Első vásárló">First-time buyer</button><button type="button" data-val="additional" data-en="Additional property" data-de="Zusatzimmobilie" data-es="Propiedad adicional" data-hu="További ingatlan">Additional property</button></div>
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          <h3 data-en="Stamp duty payable" data-de="Zu zahlende Steuer" data-es="Impuesto a pagar" data-hu="Fizetendő illeték">Stamp duty payable</h3>
+          <div class="calc-big" id="sdlt-big">£7,500</div>
+          <div class="calc-rows" id="sdlt-bands"></div>
+          <p class="calc-note" data-en="England &amp; Northern Ireland rates from April 2025. Additional-property surcharge +5%. Scotland (LBTT) and Wales (LTT) differ." data-de="Sätze für England &amp; Nordirland ab April 2025. Zuschlag für Zusatzimmobilien +5%. Schottland (LBTT) und Wales (LTT) weichen ab." data-es="Tarifas de Inglaterra e Irlanda del Norte desde abril de 2025. Recargo por propiedad adicional +5%. Escocia (LBTT) y Gales (LTT) difieren." data-hu="Anglia és Észak-Írország 2025. áprilisi kulcsai. További ingatlan felára +5%. Skócia (LBTT) és Wales (LTT) eltér.">England &amp; Northern Ireland rates from April 2025. Additional-property surcharge +5%. Scotland (LBTT) and Wales (LTT) differ.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm"><span data-en="Plan the full purchase cost" data-de="Gesamtkosten planen" data-es="Planificar el coste total" data-hu="Teljes költség tervezése">Plan the full purchase cost</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ BTL ============ -->
+    <div class="calc-panel" id="panel-btl">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label><span data-en="Expected monthly rent" data-de="Erwartete Monatsmiete" data-es="Alquiler mensual previsto" data-hu="Várható havi bérleti díj">Expected monthly rent</span><output id="btl-rent-out">£1,500</output></label>
+            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1500">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Stress test rate (%)" data-de="Stresstest-Zinssatz (%)" data-es="Tipo de estrés (%)" data-hu="Stresszteszt kamat (%)">Stress test rate (%)</span><output id="btl-stress-out">5.5%</output></label>
+            <input type="range" id="btl-stress" min="3" max="10" step="0.25" value="5.5">
+          </div>
+          <div class="calc-field">
+            <label><span data-en="Rental cover requirement (ICR)" data-de="Mietdeckungsquote (ICR)" data-es="Cobertura exigida (ICR)" data-hu="Fedezettségi követelmény (ICR)">Rental cover requirement (ICR)</span></label>
+            <div class="calc-seg" id="btl-icr"><button type="button" data-val="125" class="active" data-en="125% — basic-rate / SPV" data-de="125% — Basissteuersatz / SPV" data-es="125% — tipo básico / SPV" data-hu="125% — alapkulcs / cég">125% — basic-rate / SPV</button><button type="button" data-val="145" data-en="145% — higher-rate" data-de="145% — Spitzensteuersatz" data-es="145% — tipo alto" data-hu="145% — magasabb kulcs">145% — higher-rate</button></div>
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          <h3 data-en="Maximum supportable loan" data-de="Maximal tragfähiges Darlehen" data-es="Préstamo máximo sostenible" data-hu="Maximális finanszírozható hitel">Maximum supportable loan</h3>
+          <div class="calc-big" id="btl-big">£261,000</div>
+          <div class="calc-rows">
+            <div class="calc-row"><span data-en="Annual rent" data-de="Jahresmiete" data-es="Alquiler anual" data-hu="Éves bérleti díj">Annual rent</span><b id="btl-annual">—</b></div>
+            <div class="calc-row"><span data-en="Rent needed at this loan" data-de="Erforderliche Miete" data-es="Alquiler necesario" data-hu="Szükséges bérleti díj">Rent needed at this loan</span><b id="btl-needed">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further." data-de="Stresszinsen und ICR-Anforderungen variieren je nach Bank — Top-Slicing mit Privateinkommen kann das Maximum erhöhen." data-es="Los tipos de estrés e ICR varían según el banco — el top-slicing con ingresos personales puede aumentar el máximo." data-hu="A stresszkamat és az ICR bankonként eltér — a személyes jövedelemmel való kiegészítés tovább emelheti a maximumot.">Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm"><span data-en="Model my portfolio" data-de="Mein Portfolio modellieren" data-es="Modelar mi cartera" data-hu="Portfólióm modellezése">Model my portfolio</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="band-dark reveal-item">
+      <h2 data-en="Numbers are the start, not the answer" data-de="Zahlen sind der Anfang, nicht die Antwort" data-es="Los números son el inicio, no la respuesta" data-hu="A számok a kezdet, nem a válasz">Numbers are the start, not the answer</h2>
+      <p data-en="A calculator cannot see lender criteria, your income structure or next year&#x27;s plans. A twenty-minute conversation can." data-de="Ein Rechner kennt weder Bankkriterien noch Ihre Einkommensstruktur oder Ihre Pläne. Ein zwanzigminütiges Gespräch schon." data-es="Una calculadora no ve los criterios del banco, su estructura de ingresos ni sus planes. Una conversación de veinte minutos, sí." data-hu="Egy kalkulátor nem látja a banki feltételeket, a jövedelmi szerkezetét és a jövő évi terveit. Egy húszperces beszélgetés igen.">A calculator cannot see lender criteria, your income structure or next year's plans. A twenty-minute conversation can.</p>
+      <a href="/#contact" class="btn btn-gold"><span data-en="Request a private consultation" data-de="Private Beratung anfragen" data-es="Solicitar una consulta privada" data-hu="Privát konzultáció kérése">Request a private consultation</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="/js/calculators.js" defer></script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark">AM</span> Agnes Mortgage</div>
+        <p data-en="Private mortgage broker for business owners, portfolio landlords, high-net-worth clients and expats — serving the whole of the United Kingdom." data-de="Privater Hypothekenmakler für Unternehmer, Portfolio-Vermieter, vermögende Kunden und Expats — im gesamten Vereinigten Königreich." data-es="Bróker hipotecario privado para empresarios, propietarios de carteras, grandes patrimonios y expatriados — en todo el Reino Unido." data-hu="Privát jelzálogbróker cégtulajdonosoknak, portfólióval rendelkező bérbeadóknak, nagy vagyonú ügyfeleknek és külföldön élőknek — az egész Egyesült Királyságban.">Private mortgage broker for business owners, portfolio landlords, high-net-worth clients and expats — serving the whole of the United Kingdom.</p>
+      </div>
+      <div>
+        <p class="footer-title" data-en="Services" data-de="Leistungen" data-es="Servicios" data-hu="Szolgáltatások">Services</p>
+        <ul>
+<li><a href="/residential" data-en="Residential Mortgages" data-de="Wohnimmobilien-Hypotheken" data-es="Hipotecas residenciales" data-hu="Lakóingatlan-jelzáloghitelek">Residential Mortgages</a></li>
+<li><a href="/remortgage" data-en="Remortgage &amp; Refinance" data-de="Umschuldung &amp; Refinanzierung" data-es="Rehipoteca y refinanciación" data-hu="Hitelkiváltás és refinanszírozás">Remortgage & Refinance</a></li>
+<li><a href="/buy-to-let" data-en="Buy to Let" data-de="Buy-to-Let" data-es="Buy-to-Let" data-hu="Buy-to-let">Buy to Let</a></li>
+<li><a href="/hmo-finance" data-en="HMO &amp; Multi-Unit Block" data-de="HMO &amp; Mehrfamilienblock" data-es="HMO y bloque multiunidad" data-hu="HMO és többlakásos tömb">HMO & Multi-Unit Block</a></li>
+<li><a href="/self-employed" data-en="Directors &amp; Self-Employed" data-de="Unternehmer &amp; Selbständige" data-es="Directores y autónomos" data-hu="Cégvezetők és vállalkozók">Directors & Self-Employed</a></li>
+<li><a href="/contractors" data-en="Contractors" data-de="Auftragnehmer" data-es="Contratistas" data-hu="Szerződéses vállalkozók">Contractors</a></li>
+<li><a href="/expat-mortgages" data-en="Expat &amp; Foreign National" data-de="Expats &amp; Ausländer" data-es="Expatriados y extranjeros" data-hu="Külföldiek és expatok">Expat & Foreign National</a></li>
+<li><a href="/high-net-worth" data-en="High-Net-Worth &amp; Large Loans" data-de="Vermögende Kunden &amp; Großdarlehen" data-es="Grandes patrimonios y préstamos" data-hu="Nagy vagyon és nagy hitelek">High-Net-Worth & Large Loans</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-en="Company" data-de="Unternehmen" data-es="Empresa" data-hu="Cégünk">Company</p>
+        <ul>
+          <li><a href="/about" data-en="Meet Agnes" data-de="Über Agnes" data-es="Conozca a Agnes" data-hu="Ismerje meg Agnest">Meet Agnes</a></li>
+          <li><a href="/blog" data-en="Insights &amp; guides" data-de="Insights &amp; Ratgeber" data-es="Blog y guías" data-hu="Blog és útmutatók">Insights & guides</a></li>
+          <li><a href="/#contact" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-hu="Kapcsolat">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-en="Legal" data-de="Rechtliches" data-es="Legal" data-hu="Jogi">Legal</p>
+        <ul>
+          <li><a href="/privacy-policy" data-en="Privacy policy" data-de="Datenschutz" data-es="Política de privacidad" data-hu="Adatvédelem">Privacy policy</a></li>
+          <li><a href="/terms" data-en="Terms of business" data-de="Geschäftsbedingungen" data-es="Términos del servicio" data-hu="Üzleti feltételek">Terms of business</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Agnes Mortgage is a trading name of [LEGAL ENTITY NAME LTD], registered in England and Wales, company number [COMPANY NUMBER]. Registered office: [REGISTERED OFFICE ADDRESS]. [LEGAL ENTITY NAME LTD] is authorised and regulated by the Financial Conduct Authority, FCA number [FCA NUMBER]. The FCA does not regulate most buy-to-let mortgages. The guidance on this website is subject to the UK regulatory regime and is therefore targeted at consumers based in the UK. A fee may be charged for mortgage advice; the exact amount depends on your circumstances and will be agreed before any work begins.</p>
+      <span class="risk">Your home may be repossessed if you do not keep up repayments on your mortgage.</span>
+      <p style="margin-top:14px">© 2026 Agnes Mortgage. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="/js/scripts.js" defer></script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

@@ -32,7 +32,7 @@ def service_jsonld(name, desc, slug):
 def build_index():
     jsonld = f"""<script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"FinancialService","name":"Agnes Mortgage",
-"description":"Private mortgage advisory for business owners, portfolio landlords, high-net-worth clients and expats across the United Kingdom.",
+"description":"Private mortgage broker for business owners, portfolio landlords, high-net-worth clients and expats across the United Kingdom.",
 "url":"{BASE}","image":"{BASE}/img/og-cover.jpg","telephone":"{PHONE_DISP}",
 "areaServed":{{"@type":"Country","name":"United Kingdom"}},
 "knowsAbout":["Buy-to-let mortgages","Limited company buy-to-let","HMO finance","Expat mortgages","Self-employed mortgages","High-net-worth mortgages","Remortgaging"],
@@ -43,6 +43,18 @@ def build_index():
 </script>"""
 
     cards = [
+        ("residential", "svc-residential.jpg",
+         ("Residential Mortgages", "Wohnimmobilien-Hypotheken", "Hipotecas residenciales", "Lakóingatlan-jelzáloghitelek"),
+         ("Your home is not a standard transaction. Complex income, unusual properties and tight timelines need a broker who knows which lender fits — not a comparison website.",
+          "Ihr Zuhause ist keine Standardtransaktion. Komplexes Einkommen, ungewöhnliche Immobilien und enge Fristen brauchen einen Makler, der den richtigen Kreditgeber kennt.",
+          "Su hogar no es una transacción estándar. Ingresos complejos, propiedades inusuales y plazos ajustados necesitan un bróker que sepa qué banco encaja.",
+          "Az otthona nem egy szokványos ügylet. Összetett jövedelem, szokatlan ingatlanok és szoros határidők — ehhez kell egy bróker, aki tudja, melyik bank illik Önhöz.")),
+        ("remortgage", "svc-remortgage.jpg",
+         ("Remortgage & Refinance", "Umschuldung & Refinanzierung", "Rehipoteca y refinanciación", "Hitelkiváltás és refinanszírozás"),
+         ("Fixed rate ending? Capital to raise? We track your deals and move you at the right moment — never a day on the standard variable rate.",
+          "Zinsbindung läuft aus? Kapitalbedarf? Wir überwachen Ihre Konditionen und handeln zum richtigen Zeitpunkt — kein Tag im teuren Standardzins.",
+          "¿Termina su tipo fijo? ¿Necesita capital? Seguimos sus condiciones y actuamos en el momento justo — ni un día en el tipo variable estándar.",
+          "Lejár a fix kamat? Tőkét vonna ki? Figyeljük a konstrukcióit és a megfelelő pillanatban lépünk — egy napot sem tölt a drága változó kamaton.")),
         ("buy-to-let", "svc-buy-to-let.jpg",
          ("Buy to Let", "Buy-to-Let", "Buy-to-Let", "Buy-to-let"),
          ("From your first investment property to a structured limited-company portfolio — lending built around your growth plan, not a single transaction.",
@@ -55,36 +67,30 @@ def build_index():
           "Spezialfinanzierung für HMOs, Mehrfamilienblöcke und Mischobjekte — dort, wo klassische Banken nicht hingehen.",
           "Financiación especializada para HMO, bloques de varias unidades y activos de uso mixto — donde la banca tradicional no llega.",
           "Speciális hitelezés HMO-kra, többlakásos épületekre és vegyes hasznosítású ingatlanokra — ahová a nagybankok nem mennek.")),
-        ("expat-mortgages", "svc-expat.jpg",
-         ("Expat & Foreign National Mortgages", "Expat- & Ausländerfinanzierung", "Hipotecas para expatriados y extranjeros", "Jelzáloghitel külföldieknek és expatoknak"),
-         ("UK property finance for British expats and foreign nationals — foreign income, foreign address, no UK credit footprint? We arrange it anyway.",
-          "UK-Immobilienfinanzierung für britische Expats und ausländische Staatsbürger — ausländisches Einkommen und Adresse? Wir arrangieren es trotzdem.",
-          "Financiación de propiedades en el Reino Unido para expatriados y extranjeros — ¿ingresos y domicilio en el extranjero? Lo gestionamos igualmente.",
-          "Brit ingatlanfinanszírozás külföldön élő briteknek és külföldi állampolgároknak — külföldi jövedelemmel és címmel is megoldjuk.")),
         ("self-employed", "svc-self-employed.jpg",
          ("Directors & Self-Employed", "Unternehmer & Selbständige", "Directores y autónomos", "Cégvezetők és vállalkozók"),
          ("Retained profits, dividends, day rates, one year of accounts — we present your income the way specialist underwriters need to see it.",
           "Einbehaltene Gewinne, Dividenden, Tagessätze, ein Jahresabschluss — wir präsentieren Ihr Einkommen so, wie Underwriter es sehen müssen.",
           "Beneficios retenidos, dividendos, tarifas diarias, un año de cuentas — presentamos sus ingresos como los analistas necesitan verlos.",
           "Visszatartott nyereség, osztalék, napidíj, egyéves beszámoló — úgy mutatjuk be a jövedelmét, ahogy a hitelbírálók látni akarják.")),
+        ("contractors", "svc-self-employed.jpg",
+         ("Contractor Mortgages", "Auftragnehmer-Hypotheken", "Hipotecas para contratistas", "Szerződéses jelzáloghitelek"),
+         ("Day rate, umbrella company or limited company — lenders assess contractor income differently, and the right route can double what you qualify for.",
+          "Tagessatz, Umbrella oder eigene GmbH — Banken bewerten Auftragnehmer-Einkommen unterschiedlich, und der richtige Weg kann die Darlehenssumme verdoppeln.",
+          "Tarifa diaria, umbrella o sociedad limitada — los bancos evalúan los ingresos de contratistas de forma diferente, y la vía correcta puede duplicar su capacidad.",
+          "Napidíj, ernyőcégen vagy saját Kft.-n keresztül — a bankok eltérően értékelik a szerződéses jövedelmet, és a helyes út megduplázhatja a hitelkeretét.")),
+        ("expat-mortgages", "svc-expat.jpg",
+         ("Expat & Foreign National Mortgages", "Expat- & Ausländerfinanzierung", "Hipotecas para expatriados y extranjeros", "Jelzáloghitel külföldieknek és expatoknak"),
+         ("UK property finance for British expats and foreign nationals — foreign income, foreign address, no UK credit footprint? We arrange it anyway.",
+          "UK-Immobilienfinanzierung für britische Expats und ausländische Staatsbürger — ausländisches Einkommen und Adresse? Wir arrangieren es trotzdem.",
+          "Financiación de propiedades en el Reino Unido para expatriados y extranjeros — ¿ingresos y domicilio en el extranjero? Lo gestionamos igualmente.",
+          "Brit ingatlanfinanszírozás külföldön élő briteknek és külföldi állampolgároknak — külföldi jövedelemmel és címmel is megoldjuk.")),
         ("high-net-worth", "svc-hnw.jpg",
          ("High-Net-Worth & Large Loans", "Vermögende Kunden & Großdarlehen", "Grandes patrimonios", "Nagy vagyon és nagy hitelek"),
          ("Discreet, bespoke finance for complex wealth — private banks, interest-only structures, multi-currency income and lending well beyond £1m.",
           "Diskrete, maßgeschneiderte Finanzierung für komplexe Vermögen — Privatbanken, endfällige Strukturen und Darlehen weit über £1 Mio.",
           "Financiación discreta y a medida para patrimonios complejos — banca privada, estructuras de solo interés y préstamos muy por encima de £1M.",
           "Diszkrét, egyedi finanszírozás összetett vagyonokra — privátbankok, csak-kamat konstrukciók és £1M feletti hitelek.")),
-        ("residential", "svc-residential.jpg",
-         ("Residential Mortgages", "Wohnimmobilien-Hypotheken", "Hipotecas residenciales", "Lakóingatlan-jelzáloghitelek"),
-         ("Your home is not a standard transaction. Complex income, unusual properties and tight timelines need an adviser who knows which lender fits — not a comparison website.",
-          "Ihr Zuhause ist keine Standardtransaktion. Komplexes Einkommen, ungewöhnliche Immobilien und enge Fristen brauchen eine Beraterin, die den richtigen Kreditgeber kennt.",
-          "Su hogar no es una transacción estándar. Ingresos complejos, propiedades inusuales y plazos ajustados necesitan una asesora que sepa qué banco encaja.",
-          "Az otthona nem egy szokványos ügylet. Összetett jövedelem, szokatlan ingatlanok és szoros határidők — ehhez kell egy tanácsadó, aki tudja, melyik bank illik Önhöz.")),
-        ("remortgage", "svc-remortgage.jpg",
-         ("Remortgage & Refinance", "Umschuldung & Refinanzierung", "Rehipoteca y refinanciación", "Hitelkiváltás és refinanszírozás"),
-         ("Fixed rate ending? Capital to raise? We track your deals and move you at the right moment — never a day on the standard variable rate.",
-          "Zinsbindung läuft aus? Kapitalbedarf? Wir überwachen Ihre Konditionen und handeln zum richtigen Zeitpunkt — kein Tag im teuren Standardzins.",
-          "¿Termina su tipo fijo? ¿Necesita capital? Seguimos sus condiciones y actuamos en el momento justo — ni un día en el tipo variable estándar.",
-          "Lejár a fix kamat? Tőkét vonna ki? Figyeljük a konstrukcióit és a megfelelő pillanatban lépünk — egy napot sem tölt a drága változó kamaton.")),
     ]
     cards_html = "\n".join(f"""      <article class="card reveal-item">
         <a href="/{slug}" class="card-img"><img src="/img/{img}" alt="{names[0]} — Agnes Mortgage" loading="lazy"></a>
@@ -96,8 +102,8 @@ def build_index():
       </article>""" for slug, img, names, descs in cards)
 
     html = head(
-        "Private Mortgage Adviser UK — Landlords & Expats | Agnes Mortgage",
-        "Whole-of-market UK mortgage advisory for portfolio landlords, HMO investors, company directors and expats. Advice in English, German, Spanish and Hungarian.",
+        "Private Mortgage Broker UK — Landlords & Expats | Agnes Mortgage",
+        "Whole-of-market UK mortgage broker for portfolio landlords, HMO investors, company directors and expats. Advice in English, German, Spanish and Hungarian.",
         "", jsonld=jsonld)
     html += lang_gate() + header("home")
 
@@ -112,7 +118,7 @@ def build_index():
   <div class="hero-veil"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      {t("span", "Private mortgage advisory · United Kingdom", "Private Hypothekenberatung · Vereinigtes Königreich", "Asesoría hipotecaria privada · Reino Unido", "Privát jelzálog-tanácsadás · Egyesült Királyság", cls="eyebrow")}
+      {t("span", "Private mortgage broker · United Kingdom", "Privater Hypothekenmakler · Vereinigtes Königreich", "Bróker hipotecario privado · Reino Unido", "Privát jelzálogbróker · Egyesült Királyság", cls="eyebrow")}
       <h1><span data-en="Mortgage advice for those" data-de="Hypothekenberatung für alle," data-es="Asesoría hipotecaria para quienes" data-hu="Jelzálog-tanácsadás azoknak,">Mortgage advice for those</span> <span class="accent-text" data-en="the high street wasn't built for" data-de="für die Standardbanken nicht gemacht sind" data-es="no encajan en la banca tradicional" data-hu="akikre a nagybankok nem készültek">the high street wasn't built for</span></h1>
       {t("p", "Portfolio landlords. Company directors. High-net-worth families. Expats buying from abroad. Complex income is our everyday — we structure it, present it and place it with the right lender across the whole UK market.",
          "Portfolio-Vermieter. Geschäftsführer. Vermögende Familien. Expats, die aus dem Ausland kaufen. Komplexes Einkommen ist unser Alltag — wir strukturieren, präsentieren und platzieren es beim richtigen Kreditgeber im gesamten britischen Markt.",
@@ -120,10 +126,10 @@ def build_index():
          "Portfólióval rendelkező bérbeadók. Cégvezetők. Nagy vagyonú családok. Külföldről vásárló expatok. Az összetett jövedelem a mindennapjaink — strukturáljuk, bemutatjuk és a megfelelő hitelezőnél helyezzük el a teljes brit piacon.")}
       <div class="hero-actions">
         <a href="/#contact" class="btn btn-gold">{t("span", "Request a consultation", "Beratung anfragen", "Solicitar consulta", "Konzultáció kérése")} {ICON['arrow']}</a>
-        <a href="/about" class="btn btn-ghost">{t("span", "Meet your adviser", "Ihre Beraterin", "Conozca a su asesora", "Ismerje meg tanácsadóját")}</a>
+        <a href="/about" class="btn btn-ghost">{t("span", "Meet your broker", "Ihren Makler", "Conozca a su bróker", "Ismerje meg brókerét")}</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><b>200+</b>{t("span", "lenders across the market", "Kreditgeber am Markt", "prestamistas en el mercado", "hitelező a piacon")}</div>
+        <div class="hero-stat"><b>100+</b>{t("span", "lenders across the market", "Kreditgeber am Markt", "prestamistas en el mercado", "hitelező a piacon")}</div>
         <div class="hero-stat"><b>4</b>{t("span", "languages of advice", "Beratungssprachen", "idiomas de asesoría", "nyelven elérhető tanácsadás")}</div>
         <div class="hero-stat"><b>UK</b>{t("span", "nationwide coverage", "landesweite Abdeckung", "cobertura nacional", "országos lefedettség")}</div>
       </div>
@@ -143,7 +149,7 @@ def build_index():
   <div class="container">
     <div class="section-head reveal-item">
       {t("span", "What we arrange", "Unsere Leistungen", "Qué gestionamos", "Amivel foglalkozunk", cls="eyebrow")}
-      {t("h2", "Seven specialisms. One standard: bespoke.", "Sieben Spezialgebiete. Ein Standard: maßgeschneidert.", "Siete especialidades. Un estándar: a medida.", "Hét szakterület. Egy mérce: az egyedi megoldás.")}
+      {t("h2", "Eight specialisms. One standard: bespoke.", "Acht Spezialgebiete. Ein Standard: maßgeschneidert.", "Ocho especialidades. Un estándar: a medida.", "Nyolc szakterület. Egy mérce: az egyedi megoldás.")}
       {t("p", "We deliberately serve a narrow clientele so the depth of expertise stays exceptional in every case we take on.",
          "Wir betreuen bewusst eine ausgewählte Klientel, damit die Expertise in jedem Fall außergewöhnlich bleibt.",
          "Atendemos deliberadamente a una clientela selecta para que la profundidad de la experiencia sea excepcional en cada caso.",
@@ -158,18 +164,18 @@ def build_index():
 <section class="section" style="padding-top:0">
   <div class="container">
     <div class="split">
-      <div class="split-img reveal-item"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage adviser (portrait coming soon)" loading="lazy"></div>
+      <div class="split-img reveal-item"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage broker (portrait coming soon)" loading="lazy"></div>
       <div class="split-body reveal-item">
-        {t("span", "Your adviser", "Ihre Beraterin", "Su asesora", "Az Ön tanácsadója", cls="eyebrow")}
+        {t("span", "Your broker", "Ihren Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
         {t("h2", "Advice with a name, not a call centre", "Beratung mit Namen — kein Callcenter", "Asesoría con nombre propio, no un call center", "Tanácsadás névvel — nem call center")}
-        {t("p", "Agnes Mortgage is built on one principle: clients with complex finances deserve one senior adviser who knows their whole picture — every company, every property, every plan — and stays with them for years, not one transaction.",
-           "Agnes Mortgage basiert auf einem Prinzip: Kunden mit komplexen Finanzen verdienen eine erfahrene Beraterin, die ihr gesamtes Bild kennt — jede Firma, jede Immobilie, jeden Plan — und über Jahre an ihrer Seite bleibt.",
-           "Agnes Mortgage se basa en un principio: los clientes con finanzas complejas merecen una asesora sénior que conozca su panorama completo — cada empresa, cada propiedad, cada plan — y les acompañe durante años.",
-           "Az Agnes Mortgage egyetlen elvre épül: az összetett pénzügyekkel rendelkező ügyfelek megérdemelnek egy vezető tanácsadót, aki a teljes képet ismeri — minden céget, ingatlant és tervet —, és évekig mellettük marad.")}
+        {t("p", "Agnes Mortgage is built on one principle: clients with complex finances deserve one senior broker who knows their whole picture — every company, every property, every plan — and stays with them for years, not one transaction.",
+           "Agnes Mortgage basiert auf einem Prinzip: Kunden mit komplexen Finanzen verdienen einen erfahrenen Makler, der ihr gesamtes Bild kennt — jede Firma, jede Immobilie, jeden Plan — und über Jahre an ihrer Seite bleibt.",
+           "Agnes Mortgage se basa en un principio: los clientes con finanzas complejas merecen un bróker sénior que conozca su panorama completo — cada empresa, cada propiedad, cada plan — y les acompañe durante años.",
+           "Az Agnes Mortgage egyetlen elvre épül: az összetett pénzügyekkel rendelkező ügyfelek megérdemelnek egy vezető brókert, aki a teljes képet ismeri — minden céget, ingatlant és tervet —, és évekig mellettük marad.")}
         <ul class="check-list">
-          {check("Fully qualified, FCA-regulated mortgage adviser", "Voll qualifizierte, FCA-regulierte Hypothekenberaterin", "Asesora hipotecaria cualificada y regulada por la FCA", "Képzett, FCA által felügyelt jelzálog-tanácsadó")}
+          {check("Fully qualified, FCA-regulated mortgage broker", "Voll qualifizierte, FCA-regulierter Hypothekenmakler", "Bróker hipotecario cualificado y regulado por la FCA", "Képzett, FCA által felügyelt jelzálogbróker")}
           {check("Advice in English, German, Spanish and Hungarian", "Beratung auf Englisch, Deutsch, Spanisch und Ungarisch", "Asesoría en inglés, alemán, español y húngaro", "Tanácsadás angolul, németül, spanyolul és magyarul")}
-          {check("Direct line to your adviser — including WhatsApp", "Direkter Draht zu Ihrer Beraterin — auch per WhatsApp", "Línea directa con su asesora — incluido WhatsApp", "Közvetlen kapcsolat a tanácsadóval — WhatsAppon is")}
+          {check("Direct line to your broker — including WhatsApp", "Direkter Draht zu Ihrem Makler — auch per WhatsApp", "Línea directa con su bróker — incluido WhatsApp", "Közvetlen kapcsolat a brókerrel — WhatsAppon is")}
         </ul>
         <div style="margin-top:22px"><a href="/about" class="btn btn-primary">{t("span", "Meet Agnes", "Über Agnes", "Conozca a Agnes", "Ismerje meg Agnest")} {ICON['arrow']}</a></div>
       </div>
@@ -266,7 +272,7 @@ def build_service(slug, img, title, desc, names, hero_p, s1, s2, faqs, cta):
         {t("p", *s2[2])}
         <div style="margin-top:20px"><a href="/#contact" class="btn btn-primary">{t("span", "Discuss your case", "Ihren Fall besprechen", "Consultar su caso", "Beszéljük meg az esetét")} {ICON['arrow']}</a></div>
       </div>
-      <div class="split-img reveal-item"><img src="/img/hero-fallback.jpg" alt="Agnes Mortgage — UK private mortgage advisory" loading="lazy"></div>
+      <div class="split-img reveal-item"><img src="/img/hero-fallback.jpg" alt="Agnes Mortgage — UK private mortgage broker" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -387,6 +393,56 @@ def build_all_services():
          "Senden Sie uns Objektdaten und Mietaufstellung — wir sagen Ihnen, was eine Spezialbank wirklich finanzieren würde.",
          "Envíenos los datos de la propiedad y el cuadro de alquileres — le diremos qué financiaría realmente un banco especializado.",
          "Küldje el az ingatlan adatait és a bérleti kimutatást — megmondjuk, mennyit finanszírozna valójában egy specialista bank."))
+
+def build_contractors():
+    build_service(
+        "contractors", "svc-self-employed.jpg",
+        "Contractor Mortgages UK — Day Rate, Umbrella & Ltd | Agnes Mortgage",
+        "UK contractor mortgage advice: day-rate assessment, umbrella company income, limited company contractors. Whole-of-market, FCA-regulated broker.",
+        ("Contractor Mortgages", "Auftragnehmer-Hypotheken", "Hipotecas para contratistas", "Szerződéses jelzáloghitelek"),
+        ("Day rate, umbrella or limited company — lenders assess contractor income in three completely different ways. The right route can double what you qualify for.",
+         "Tagessatz, Umbrella oder eigene GmbH — Banken bewerten Auftragnehmer-Einkommen auf drei völlig unterschiedliche Arten. Der richtige Weg kann Ihre Darlehenssumme verdoppeln.",
+         "Tarifa diaria, umbrella o sociedad limitada — los bancos evalúan los ingresos de contratistas de tres formas completamente distintas. La vía correcta puede duplicar su capacidad.",
+         "Napidíj, ernyőcég vagy saját Kft. — a bankok háromféleképpen értékelik a szerződéses jövedelmet. A helyes út megduplázhatja, amire jogosult."),
+        ((("Three income routes, one right answer", "Drei Einkommenswege, eine richtige Antwort", "Tres vías de ingresos, una respuesta correcta", "Három jövedelmi út, egy helyes válasz"),
+          ("A contractor earning £500 a day can qualify for anything from £180,000 to £450,000 depending on how the lender assesses income. Day-rate annualisation, umbrella payslips, or company accounts — each route has lenders that prefer it, and choosing wrong means borrowing far less than you should.",
+           "Ein Auftragnehmer mit £500 Tagessatz kann je nach Bewertungsmethode für £180.000 bis £450.000 qualifiziert werden. Tagessatz-Hochrechnung, Umbrella-Gehaltsabrechnungen oder Firmenabschlüsse — für jede Methode gibt es spezialisierte Banken.",
+           "Un contratista que gana £500 al día puede cualificar desde £180.000 hasta £450.000 según cómo evalúe el banco. Anualización de tarifa diaria, nóminas de umbrella o cuentas de sociedad — cada vía tiene bancos que la prefieren.",
+           "Egy napi £500-ot kereső szerződéses £180.000-tól £450.000-ig bármennyire jogosult lehet, attól függően, hogyan értékeli a bank a jövedelmét. Napidíj-éves vetítés, ernyőcéges bérjegyzék vagy céges beszámoló — mindegyikhez vannak speciális bankok.")),
+         [("Day-rate contractors assessed at annualised contract value (×46 or ×48 weeks)", "Tagessatz-Auftragnehmer bewertet auf Jahresbasis (×46 oder ×48 Wochen)", "Contratistas de tarifa diaria evaluados por valor anualizado (×46 o ×48 semanas)", "Napidíjas szerződésesek éves vetítéssel értékelve (×46 vagy ×48 hét)"),
+          ("Umbrella company contractors using PAYE payslips", "Umbrella-Auftragnehmer mit PAYE-Gehaltsabrechnungen", "Contratistas umbrella con nóminas PAYE", "Ernyőcéges szerződésesek PAYE bérjegyzékkel"),
+          ("Ltd company contractors assessed on salary plus dividends or retained profit", "GmbH-Auftragnehmer bewertet auf Gehalt plus Dividenden oder einbehaltenen Gewinn", "Contratistas Ltd evaluados por salario más dividendos o beneficio retenido", "Kft.-s szerződésesek fizetés + osztalék vagy visszatartott nyereség alapján"),
+          ("CIS subcontractors in construction and trades", "CIS-Subunternehmer im Baugewerbe", "Subcontratistas CIS en construcción", "CIS alvállalkozók az építőiparban"),
+          ("Contract gaps, multiple contracts and IR35 — navigated with the right lender", "Vertragslücken, mehrere Verträge und IR35 — beim richtigen Kreditgeber kein Hindernis", "Vacíos entre contratos, múltiples contratos e IR35 — navegados con el banco adecuado", "Szerződés-szünetek, több szerződés és IR35 — a megfelelő bankkal kezelhetők")]),
+        ((("Day rate is the fastest path to maximum borrowing", "Tagessatz ist der schnellste Weg zur maximalen Darlehenssumme", "La tarifa diaria es la vía más rápida al máximo préstamo", "A napidíj a leggyorsabb út a maximális hitelösszeghez"),
+          ("If you have a current contract and at least 12 months of continuous contracting history, day-rate lenders will annualise your contract value and apply a standard income multiple — typically 4.5× to 5.5×. That usually produces a far higher figure than your company accounts, which show income after expenses and tax planning.",
+           "Wenn Sie einen laufenden Vertrag und mindestens 12 Monate kontinuierliche Auftragstätigkeit nachweisen, rechnen Tagessatz-Banken Ihren Vertragswert aufs Jahr hoch und wenden das übliche Vielfache an — typisch 4,5× bis 5,5×. Das ergibt meist deutlich mehr als Ihre Firmenabschlüsse nach Ausgaben und Steueroptimierung.",
+           "Si tiene un contrato vigente y al menos 12 meses de historial continuo, los bancos de tarifa diaria anualizarán su valor contractual y aplicarán un múltiplo estándar — normalmente 4,5× a 5,5×. Eso suele producir una cifra muy superior a sus cuentas de empresa, que muestran ingresos tras gastos y planificación fiscal.",
+           "Ha van aktuális szerződése és legalább 12 hónapos folyamatos szerződéses múltja, a napidíjas bankok éves szintre vetítik a szerződés értékét és a szokásos szorzót alkalmazzák — jellemzően 4,5×–5,5×. Ez általában jóval magasabb összeget eredményez, mint a céges beszámoló, ami a kiadások és adótervezés utáni jövedelmet mutatja."),
+          ("We check which route produces the strongest result for your specific situation before submitting anything. Sometimes it is the day rate, sometimes the company accounts — and occasionally the umbrella payslip route wins for contractors who have recently switched structures.",
+           "Wir prüfen, welcher Weg in Ihrer Situation das beste Ergebnis liefert, bevor wir etwas einreichen. Manchmal ist es der Tagessatz, manchmal die Firmenabschlüsse — und gelegentlich gewinnt die Umbrella-Methode bei kürzlich gewechselter Struktur.",
+           "Comprobamos qué vía produce el mejor resultado para su situación antes de presentar nada. A veces es la tarifa diaria, a veces las cuentas de empresa — y ocasionalmente la vía umbrella gana para contratistas que han cambiado de estructura recientemente.",
+           "Mielőtt bármit beadnánk, ellenőrizzük, melyik út hozza a legerősebb eredményt az Ön helyzetében. Néha a napidíj, néha a céges beszámoló — és alkalmanként az ernyőcéges út nyer azoknál, akik nemrég váltottak struktúrát."))),
+        [((("How long do I need to have been contracting?", "Wie lange muss ich als Auftragnehmer tätig sein?", "¿Cuánto tiempo necesito llevar como contratista?", "Mennyi ideje kell szerződésesnek lennem?")),
+          (("Most day-rate lenders want at least 12 months of continuous contracting, though not necessarily with the same client. Some accept six months if your CV shows a longer career in the field. We match the requirement to your history before running any credit search.",
+            "Die meisten Tagessatz-Banken verlangen mindestens 12 Monate kontinuierliche Auftragstätigkeit, nicht unbedingt beim selben Kunden. Einige akzeptieren sechs Monate bei längerer Branchenerfahrung. Wir gleichen die Anforderung mit Ihrer Historie ab, bevor wir eine Bonitätsprüfung starten.",
+            "La mayoría de bancos de tarifa diaria exigen al menos 12 meses de contratación continua, no necesariamente con el mismo cliente. Algunos aceptan seis meses si su CV muestra una carrera más larga. Ajustamos el requisito a su historial antes de cualquier consulta de crédito.",
+            "A legtöbb napidíjas bank legalább 12 hónap folyamatos szerződéses múltat kér, bár nem feltétlenül ugyanannál az ügyfélnél. Néhányan hat hónapot is elfogadnak, ha az önéletrajz hosszabb szakmai pályát mutat. A követelményt az Ön múltjához illesztjük, mielőtt bármilyen hitelkeresést futtatnánk."))),
+         ((("What if I have a gap between contracts?", "Was, wenn ich eine Vertragspause habe?", "¿Qué pasa si tengo un vacío entre contratos?", "Mi van, ha szünet van a szerződéseim között?")),
+          (("Short gaps — up to six weeks — are usually fine with most lenders. Longer breaks or a current gap require careful lender selection; some will assess on the last completed contract if you have a strong track record. We would not submit until we know the lender's stance on your specific gap.",
+            "Kurze Pausen — bis zu sechs Wochen — sind bei den meisten Banken kein Problem. Längere Unterbrechungen erfordern sorgfältige Bankauswahl; einige bewerten anhand des letzten abgeschlossenen Vertrags bei guter Historie. Wir reichen erst ein, wenn wir die Position der Bank zu Ihrer Pause kennen.",
+            "Vacíos cortos — hasta seis semanas — suelen ser aceptables. Interrupciones más largas requieren selección cuidadosa; algunos bancos evalúan por el último contrato si tiene buen historial. No presentamos hasta conocer la postura del banco sobre su vacío concreto.",
+            "Rövid szünetek — hat hétig — általában elfogadhatók a legtöbb banknál. Hosszabb szünet vagy aktuális szünet gondos bankválasztást igényel; néhányan az utolsó befejezett szerződés alapján értékelnek, ha erős a múltja. Nem adunk be semmit, amíg nem ismerjük a bank álláspontját az Ön konkrét szünetéről."))),
+         ((("Does IR35 affect my mortgage application?", "Beeinflusst IR35 meinen Hypothekenantrag?", "¿Afecta IR35 a mi solicitud?", "Az IR35 hatással van a jelzáloghitel-igénylésemre?")),
+          (("It can change which assessment route is available. Inside IR35, you are typically paid via PAYE through an umbrella or agency, so lenders treat you closer to an employee — sometimes helpful. Outside IR35 with your own Ltd, the day-rate annualisation route usually produces a higher figure. We assess your IR35 status as part of the income routing, not as an afterthought.",
+            "Es kann ändern, welcher Bewertungsweg verfügbar ist. Innerhalb von IR35 werden Sie meist über PAYE bezahlt — Banken behandeln Sie dann ähnlich wie einen Angestellten. Außerhalb von IR35 mit eigener GmbH liefert die Tagessatz-Hochrechnung meist eine höhere Summe. Wir bewerten Ihren IR35-Status als Teil der Einkommensroute.",
+            "Puede cambiar qué vía de evaluación está disponible. Dentro de IR35, normalmente cobra por PAYE a través de umbrella — los bancos le tratan más como empleado. Fuera de IR35 con su Ltd, la anualización de tarifa diaria suele producir una cifra mayor. Evaluamos su estado IR35 como parte del enrutamiento de ingresos.",
+            "Megváltoztathatja, melyik értékelési út érhető el. IR35-ön belül jellemzően PAYE-n keresztül kap fizetést — a bankok alkalmazotthoz hasonlóan kezelik. IR35-ön kívül, saját Kft.-vel a napidíj-éves vetítés általában magasabb összeget eredményez. Az IR35-státuszát a jövedelemútvonal részeként értékeljük.")))],
+        ("Contracting should unlock lending, not limit it", "Auftragnehmer sein sollte Kreditchancen eröffnen, nicht begrenzen", "Ser contratista debería abrir puertas, no cerrarlas", "A szerződéses munka lehetőségeket nyisson, ne korlátozzon",
+         "Bring us your current contract and we will show you exactly what each assessment route produces — in one conversation.",
+         "Bringen Sie Ihren aktuellen Vertrag mit und wir zeigen Ihnen, was jede Bewertungsmethode ergibt — in einem Gespräch.",
+         "Traiga su contrato actual y le mostraremos exactamente qué produce cada vía de evaluación — en una conversación.",
+         "Hozza el a jelenlegi szerződését, és megmutatjuk, mit eredményez az egyes értékelési utak — egyetlen beszélgetésben."))
 
 def build_residential():
     build_service(

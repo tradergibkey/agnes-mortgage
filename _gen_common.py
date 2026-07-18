@@ -88,13 +88,14 @@ def lang_gate():
 """
 
 NAV_ITEMS = [
-    ("buy-to-let", ("Buy to Let", "Buy-to-Let", "Buy-to-Let", "Buy-to-let")),
-    ("hmo-finance", ("HMO & Multi-Unit Block", "HMO & Mehrfamilienblock", "HMO y bloque multiunidad", "HMO és többlakásos tömb")),
-    ("expat-mortgages", ("Expat & Foreign National", "Expats & Ausländer", "Expatriados y extranjeros", "Külföldiek és expatok")),
-    ("self-employed", ("Directors & Self-Employed", "Unternehmer & Selbständige", "Directores y autónomos", "Cégvezetők és vállalkozók")),
-    ("high-net-worth", ("High-Net-Worth & Large Loans", "Vermögende Kunden & Großdarlehen", "Grandes patrimonios y préstamos", "Nagy vagyon és nagy hitelek")),
     ("residential", ("Residential Mortgages", "Wohnimmobilien-Hypotheken", "Hipotecas residenciales", "Lakóingatlan-jelzáloghitelek")),
     ("remortgage", ("Remortgage & Refinance", "Umschuldung & Refinanzierung", "Rehipoteca y refinanciación", "Hitelkiváltás és refinanszírozás")),
+    ("buy-to-let", ("Buy to Let", "Buy-to-Let", "Buy-to-Let", "Buy-to-let")),
+    ("hmo-finance", ("HMO & Multi-Unit Block", "HMO & Mehrfamilienblock", "HMO y bloque multiunidad", "HMO és többlakásos tömb")),
+    ("self-employed", ("Directors & Self-Employed", "Unternehmer & Selbständige", "Directores y autónomos", "Cégvezetők és vállalkozók")),
+    ("contractors", ("Contractors", "Auftragnehmer", "Contratistas", "Szerződéses vállalkozók")),
+    ("expat-mortgages", ("Expat & Foreign National", "Expats & Ausländer", "Expatriados y extranjeros", "Külföldiek és expatok")),
+    ("high-net-worth", ("High-Net-Worth & Large Loans", "Vermögende Kunden & Großdarlehen", "Grandes patrimonios y préstamos", "Nagy vagyon és nagy hitelek")),
 ]
 
 def header(active=""):
@@ -109,7 +110,7 @@ def header(active=""):
   <div class="header-inner">
     <a href="/" class="brand" aria-label="Agnes Mortgage — home">
       <span class="brand-mark">AM</span>
-      <span>Agnes Mortgage<small data-en="Private mortgage advisory" data-de="Private Hypothekenberatung" data-es="Asesoría hipotecaria privada" data-hu="Privát jelzálog-tanácsadás">Private mortgage advisory</small></span>
+      <span>Agnes Mortgage<small data-en="Private mortgage broker" data-de="Privater Hypothekenmakler" data-es="Bróker hipotecario privado" data-hu="Privát jelzálogbróker">Private mortgage broker</small></span>
     </a>
     <nav aria-label="Main">
       <ul class="main-nav">
@@ -120,6 +121,7 @@ def header(active=""):
 {drop}
           </div>
         </li>
+        <li>{nav_a("/calculators", "calculators", "Calculators", "Rechner", "Calculadoras", "Kalkulátorok")}</li>
         <li>{nav_a("/about", "about", "Meet Agnes", "Über Agnes", "Conozca a Agnes", "Ismerje meg Agnest")}</li>
         <li>{nav_a("/blog", "blog", "Insights", "Insights", "Blog", "Blog")}</li>
         <li>{nav_a("/#contact", "contact", "Contact", "Kontakt", "Contacto", "Kapcsolat")}</li>
@@ -135,7 +137,7 @@ def header(active=""):
           <button data-lang="hu">{FLAGS['hu']} Magyar</button>
         </div>
       </div>
-      <a href="tel:{PHONE_TEL}" class="btn btn-primary btn-sm">{ICON['phone']}<span data-en="Book a call" data-de="Gespräch buchen" data-es="Reservar llamada" data-hu="Hívás foglalása">Book a call</span></a>
+      <a href="/#contact" class="btn btn-primary btn-sm"><span data-en="Get in touch" data-de="Kontakt" data-es="Contactar" data-hu="Kapcsolat">Get in touch</span></a>
       <button class="nav-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -152,10 +154,10 @@ def footer():
     <div class="footer-grid">
       <div>
         <div class="footer-brand"><span class="brand-mark">AM</span> Agnes Mortgage</div>
-        {t("p", "Private mortgage advisory for business owners, portfolio landlords, high-net-worth clients and expats — serving the whole United Kingdom.",
-           "Private Hypothekenberatung für Unternehmer, Portfolio-Vermieter, vermögende Kunden und Expats — im gesamten Vereinigten Königreich.",
-           "Asesoría hipotecaria privada para empresarios, propietarios de carteras, grandes patrimonios y expatriados — en todo el Reino Unido.",
-           "Privát jelzálog-tanácsadás cégtulajdonosoknak, portfólióval rendelkező bérbeadóknak, nagy vagyonú ügyfeleknek és külföldön élőknek — az egész Egyesült Királyságban.")}
+        {t("p", "Private mortgage broker for business owners, portfolio landlords, high-net-worth clients and expats — serving the whole of the United Kingdom.",
+           "Privater Hypothekenmakler für Unternehmer, Portfolio-Vermieter, vermögende Kunden und Expats — im gesamten Vereinigten Königreich.",
+           "Bróker hipotecario privado para empresarios, propietarios de carteras, grandes patrimonios y expatriados — en todo el Reino Unido.",
+           "Privát jelzálogbróker cégtulajdonosoknak, portfólióval rendelkező bérbeadóknak, nagy vagyonú ügyfeleknek és külföldön élőknek — az egész Egyesült Királyságban.")}
       </div>
       <div>
         {t("p", "Services", "Leistungen", "Servicios", "Szolgáltatások", cls="footer-title")}
@@ -244,10 +246,10 @@ def contact_section():
     </div>
     <div class="contact-grid">
       <div class="contact-info-card reveal-item">
-        {t("h3", "Speak to an adviser", "Sprechen Sie mit uns", "Hable con un asesor", "Beszéljen tanácsadóval")}
+        {t("h3", "Speak to a broker", "Sprechen Sie mit uns", "Hable con un bróker", "Beszéljen brókerrel")}
         <div class="contact-line">{ICON['phone']}<div>{t("b", "Phone", "Telefon", "Teléfono", "Telefon")}<a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></div></div>
         <div class="contact-line">{ICON['clock']}<div>{t("b", "Hours", "Erreichbarkeit", "Horario", "Elérhetőség")}{t("span", "Mon–Fri 9:00–18:00 · evenings by appointment", "Mo–Fr 9:00–18:00 · abends nach Vereinbarung", "Lun–Vie 9:00–18:00 · tardes con cita", "H–P 9:00–18:00 · este egyeztetéssel")}</div></div>
-        <div class="contact-line">{ICON['pin']}<div>{t("b", "Coverage", "Einzugsgebiet", "Cobertura", "Lefedettség")}{t("span", "The whole United Kingdom — in person and remote", "Das gesamte Vereinigte Königreich — persönlich und remote", "Todo el Reino Unido — presencial y en remoto", "Az egész Egyesült Királyság — személyesen és online")}</div></div>
+        <div class="contact-line">{ICON['pin']}<div>{t("b", "Coverage", "Einzugsgebiet", "Cobertura", "Lefedettség")}{t("span", "The whole United Kingdom", "Das gesamte Vereinigte Königreich", "Todo el Reino Unido", "Az egész Egyesült Királyság")}</div></div>
         <a class="wa-btn" href="{WA}" target="_blank" rel="noopener">{ICON['wa']} WhatsApp</a>
       </div>
       <form class="form-card reveal-item" id="contactForm">
@@ -271,12 +273,15 @@ def contact_section():
           <div class="form-field">
             {t("label", "I am interested in *", "Ich interessiere mich für *", "Estoy interesado en *", "Ez érdekel *", attrs='for="cf-topic"')}
             <select id="cf-topic" name="topic" required>
-              {t("option", "Buy-to-let / portfolio", "Buy-to-Let / Portfolio", "Buy-to-let / cartera", "Buy-to-let / portfólió", attrs='value="Buy-to-let / portfolio"')}
-              {t("option", "HMO / multi-unit", "HMO / Mehrfamilienobjekt", "HMO / multiunidad", "HMO / többlakásos", attrs='value="HMO / multi-unit"')}
-              {t("option", "Expat / overseas buyer", "Expat / Auslandskäufer", "Expatriado / comprador no residente", "Külföldön élő vásárló", attrs='value="Expat / overseas buyer"')}
-              {t("option", "Self-employed / director", "Selbständig / Geschäftsführer", "Autónomo / director", "Vállalkozó / cégvezető", attrs='value="Self-employed / director"')}
-              {t("option", "High-net-worth / large loan", "Vermögender Kunde / Großdarlehen", "Gran patrimonio / préstamo grande", "Nagy vagyon / nagy hitel", attrs='value="High-net-worth / large loan"')}
+              {t("option", "Residential mortgage", "Wohnimmobilien-Hypothek", "Hipoteca residencial", "Lakóingatlan-jelzáloghitel", attrs='value="Residential mortgage"')}
               {t("option", "Remortgage / refinance", "Umschuldung / Refinanzierung", "Rehipoteca / refinanciación", "Hitelkiváltás / refinanszírozás", attrs='value="Remortgage / refinance"')}
+              {t("option", "Buy-to-let / portfolio", "Buy-to-Let / Portfolio", "Buy-to-let / cartera", "Buy-to-let / portfólió", attrs='value="Buy-to-let / portfolio"')}
+              {t("option", "HMO / multi-unit block", "HMO / Mehrfamilienblock", "HMO / bloque multiunidad", "HMO / többlakásos tömb", attrs='value="HMO / multi-unit block"')}
+              {t("option", "Self-employed / director", "Selbständig / Geschäftsführer", "Autónomo / director", "Vállalkozó / cégvezető", attrs='value="Self-employed / director"')}
+              {t("option", "Contractor (day rate / umbrella / Ltd)", "Auftragnehmer (Tagessatz / Umbrella / GmbH)", "Contratista (tarifa diaria / umbrella / Ltd)", "Szerződéses (napidíj / ernyő / Kft.)", attrs='value="Contractor"')}
+              {t("option", "Expat / foreign national", "Expat / Ausländer", "Expatriado / extranjero", "Expat / külföldi", attrs='value="Expat / foreign national"')}
+              {t("option", "High-net-worth / large loan", "Vermögender Kunde / Großdarlehen", "Gran patrimonio / préstamo grande", "Nagy vagyon / nagy hitel", attrs='value="High-net-worth / large loan"')}
+              {t("option", "Request a call back", "Rückruf anfordern", "Solicitar llamada", "Visszahívást kérek", attrs='value="Request a call back"')}
               {t("option", "Something else", "Etwas anderes", "Otro asunto", "Egyéb", attrs='value="Other"')}
             </select>
           </div>

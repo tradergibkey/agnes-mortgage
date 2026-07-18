@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://agnes-mortgage.vercel.app</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/buy-to-let</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/hmo-finance</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/expat-mortgages</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/self-employed</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/high-net-worth</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/residential</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/remortgage</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/about</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/blog</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/privacy-policy</loc><lastmod>2026-07-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://agnes-mortgage.vercel.app/terms</loc><lastmod>2026-07-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app</loc><lastmod>2026-07-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/buy-to-let</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/hmo-finance</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/expat-mortgages</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/self-employed</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/high-net-worth</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/contractors</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/residential</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/remortgage</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/calculators</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/about</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/blog</loc><lastmod>2026-07-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/privacy-policy</loc><lastmod>2026-07-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://agnes-mortgage.vercel.app/terms</loc><lastmod>2026-07-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://agnes-mortgage.vercel.app/blog/posts/limited-company-buy-to-let-2026</loc><lastmod>2026-07-01</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://agnes-mortgage.vercel.app/blog/posts/uk-mortgage-living-abroad-expat-guide</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

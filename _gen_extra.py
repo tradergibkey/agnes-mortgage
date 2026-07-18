@@ -9,12 +9,12 @@ import _gen_pages as P
 def build_about():
     bc_json, crumb = breadcrumb("Meet Agnes", "Über Agnes", "Conozca a Agnes", "Ismerje meg Agnest", "about")
     jsonld = bc_json + f"""<script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Person","name":"[ADVISER FULL NAME]","jobTitle":"Mortgage Adviser",
+{{"@context":"https://schema.org","@type":"Person","name":"[ADVISER FULL NAME]","jobTitle":"Mortgage Broker",
 "worksFor":{{"@type":"FinancialService","name":"Agnes Mortgage","url":"{BASE}"}},"url":"{BASE}/about"}}
 </script>"""
     html = head(
-        "Meet Agnes — Your Private Mortgage Adviser | Agnes Mortgage",
-        "Meet the adviser behind Agnes Mortgage: FCA-regulated, whole-of-market, advising business owners, landlords and expats in English, German, Spanish and Hungarian.",
+        "Meet Agnes — Your Private Mortgage Broker | Agnes Mortgage",
+        "Meet the broker behind Agnes Mortgage: FCA-regulated, whole-of-market, advising business owners, landlords and expats in English, German, Spanish and Hungarian.",
         "about", jsonld=jsonld)
     html += lang_gate() + header("about")
     html += f"""<main>
@@ -24,17 +24,17 @@ def build_about():
     {t("h1", "Advice with a name: Agnes", "Beratung mit Namen: Agnes", "Asesoría con nombre propio: Agnes", "Tanácsadás névvel: Agnes")}
     {t("p", "One senior adviser. Your whole financial picture. A relationship measured in years, not transactions.",
        "Eine erfahrene Beraterin. Ihr gesamtes Finanzbild. Eine Beziehung, die in Jahren gemessen wird, nicht in Transaktionen.",
-       "Una asesora sénior. Su panorama financiero completo. Una relación medida en años, no en transacciones.",
-       "Egy vezető tanácsadó. Az Ön teljes pénzügyi képe. Egy kapcsolat, amit években mérünk, nem ügyletekben.")}
+       "Un bróker sénior. Su panorama financiero completo. Una relación medida en años, no en transacciones.",
+       "Egy vezető bróker. Az Ön teljes pénzügyi képe. Egy kapcsolat, amit években mérünk, nem ügyletekben.")}
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="adviser-card reveal-item">
-      <div class="adviser-photo"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage adviser (professional portrait coming soon)"></div>
+      <div class="adviser-photo"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage broker (professional portrait coming soon)"></div>
       <div>
-        {t("span", "Your adviser", "Ihre Beraterin", "Su asesora", "Az Ön tanácsadója", cls="eyebrow")}
+        {t("span", "Your broker", "Ihr Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
         {t("h2", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]")}
         {t("p", "[BIO PARAGRAPH 1 — professional background, years in mortgage advice, previous roles, qualifications such as CeMAP. To be written after the intake interview.]",
            "[BIO ABSATZ 1 — beruflicher Werdegang, Jahre in der Hypothekenberatung, frühere Positionen, Qualifikationen. Wird nach dem Interview verfasst.]",
@@ -63,10 +63,10 @@ def build_about():
     <div class="grid-3">
       <div class="step reveal-item"><div class="step-num">I</div>
         {t("h3", "Whole of market, no shortcuts", "Gesamtmarkt, keine Abkürzungen", "Todo el mercado, sin atajos", "Teljes piac, rövidítések nélkül")}
-        {t("p", "Over 200 lenders, from global banks to private banks and specialist funds. The recommendation is driven by your case — never by a panel.",
-           "Über 200 Kreditgeber — von Großbanken über Privatbanken bis zu Spezialfonds. Die Empfehlung folgt Ihrem Fall, nie einer Vorauswahl.",
-           "Más de 200 prestamistas, desde grandes bancos hasta banca privada y fondos especializados. La recomendación la dicta su caso, nunca un panel.",
-           "Több mint 200 hitelező — a nagybankoktól a privátbankokon át a speciális alapokig. Az ajánlást az Ön ügye vezérli, sosem egy előre szűkített lista.")}</div>
+        {t("p", "Over 100 lenders, from global banks to private banks and specialist funds. The recommendation is driven by your case — never by a panel.",
+           "Über 100 Kreditgeber — von Großbanken über Privatbanken bis zu Spezialfonds. Die Empfehlung folgt Ihrem Fall, nie einer Vorauswahl.",
+           "Más de 100 prestamistas, desde grandes bancos hasta banca privada y fondos especializados. La recomendación la dicta su caso, nunca un panel.",
+           "Több mint 100 hitelező — a nagybankoktól a privátbankokon át a speciális alapokig. Az ajánlást az Ön ügye vezérli, sosem egy előre szűkített lista.")}</div>
       <div class="step reveal-item"><div class="step-num">II</div>
         {t("h3", "Discretion as default", "Diskretion als Standard", "Discreción por defecto", "Diszkréció alapból")}
         {t("p", "Financial details stay between us and the lender that needs them. No data selling, no marketing lists, no exceptions.",
@@ -319,6 +319,172 @@ def build_post(p, template=False):
     fname = "blog/post-template.html" if template else f"blog/posts/{p['slug']}.html"
     open(fname, "w").write(html)
 
+
+# =====================================================================
+# CALCULATORS
+# =====================================================================
+def build_calculators():
+    bc_json, crumb = breadcrumb("Calculators", "Rechner", "Calculadoras", "Kalkulátorok", "calculators")
+    html = head(
+        "UK Mortgage Calculators — Repayment, Borrowing, Stamp Duty, Buy-to-Let | Agnes Mortgage",
+        "Free UK mortgage tools: monthly repayment calculator, how much can I borrow, stamp duty (SDLT) calculator and buy-to-let rental cover — instant results.",
+        "calculators", jsonld=bc_json)
+    html += lang_gate() + header("calculators")
+
+    def seg(id_, options):
+        btns = "".join(
+            f'<button type="button" data-val="{v}"{" class=\"active\"" if i==0 else ""} data-en="{esc(en)}" data-de="{esc(de)}" data-es="{esc(es)}" data-hu="{esc(hu)}">{en}</button>'
+            for i,(v,en,de,es,hu) in enumerate(options))
+        return f'<div class="calc-seg" id="{id_}">{btns}</div>'
+
+    html += f"""<main>
+<section class="page-hero">
+  <div class="container">
+    {crumb}
+    {t("h1", "Mortgage calculators", "Hypothekenrechner", "Calculadoras hipotecarias", "Jelzálog-kalkulátorok")}
+    {t("p", "Instant estimates as you type — repayments, borrowing power, stamp duty and buy-to-let cover. Figures are illustrations, not offers; your exact numbers depend on lender criteria.",
+       "Sofortige Schätzungen während der Eingabe — Raten, Kreditrahmen, Grunderwerbsteuer und Buy-to-Let-Deckung. Die Zahlen sind Beispiele, keine Angebote.",
+       "Estimaciones instantáneas mientras escribe — cuotas, capacidad de préstamo, impuesto de transmisiones y cobertura buy-to-let. Las cifras son ilustrativas, no ofertas.",
+       "Azonnali becslések gépelés közben — törlesztő, hitelkeret, illeték és buy-to-let fedezettség. A számok tájékoztató jellegűek, nem ajánlatok.")}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-tabs reveal-item">
+      <button class="calc-tab active" data-panel="repay" data-en="Monthly repayment" data-de="Monatliche Rate" data-es="Cuota mensual" data-hu="Havi törlesztő">Monthly repayment</button>
+      <button class="calc-tab" data-panel="borrow" data-en="How much can I borrow?" data-de="Wie viel kann ich leihen?" data-es="¿Cuánto puedo pedir?" data-hu="Mennyit kaphatok?">How much can I borrow?</button>
+      <button class="calc-tab" data-panel="sdlt" data-en="Stamp duty (SDLT)" data-de="Grunderwerbsteuer (SDLT)" data-es="Impuesto SDLT" data-hu="Illeték (SDLT)">Stamp duty (SDLT)</button>
+      <button class="calc-tab" data-panel="btl" data-en="Buy-to-let cover" data-de="Buy-to-Let-Deckung" data-es="Cobertura buy-to-let" data-hu="Buy-to-let fedezet">Buy-to-let cover</button>
+    </div>
+
+    <!-- ============ REPAYMENT ============ -->
+    <div class="calc-panel active" id="panel-repay">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label>{t("span", "Loan amount", "Darlehensbetrag", "Importe del préstamo", "Hitelösszeg")}<output id="repay-amount-out">£250,000</output></label>
+            <input type="range" id="repay-amount" min="25000" max="3000000" step="5000" value="250000">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Interest rate (% per year)", "Zinssatz (% pro Jahr)", "Tipo de interés (% anual)", "Kamatláb (% évente)")}<output id="repay-rate-out">4.5%</output></label>
+            <input type="range" id="repay-rate" min="0.5" max="12" step="0.05" value="4.5">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Term (years)", "Laufzeit (Jahre)", "Plazo (años)", "Futamidő (év)")}<output id="repay-term-out">25</output></label>
+            <input type="range" id="repay-term" min="5" max="40" step="1" value="25">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Repayment type", "Tilgungsart", "Tipo de amortización", "Törlesztés típusa")}</label>
+            {seg("repay-type", [("repayment","Capital repayment","Annuität","Amortización","Tőke + kamat"),("io","Interest-only","Tilgungsfrei","Solo interés","Csak kamat")])}
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          {t("h3", "Estimated monthly payment", "Geschätzte Monatsrate", "Cuota mensual estimada", "Becsült havi törlesztő")}
+          <div class="calc-big" id="repay-big">£1,390</div>
+          <div class="calc-rows">
+            <div class="calc-row">{t("span", "Total repaid over term", "Gesamtrückzahlung", "Total devuelto", "Teljes visszafizetés")}<b id="repay-total">—</b></div>
+            <div class="calc-row">{t("span", "Total interest", "Gesamtzinsen", "Interés total", "Teljes kamat")}<b id="repay-interest">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Illustration only. Assumes a constant rate for the whole term." data-de="Nur zur Veranschaulichung. Konstanter Zinssatz über die gesamte Laufzeit angenommen." data-es="Solo ilustrativo. Supone un tipo constante durante todo el plazo." data-hu="Csak illusztráció. A teljes futamidőre változatlan kamatot feltételez.">Illustration only. Assumes a constant rate for the whole term.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm">{t("span", "Get exact figures", "Genaue Zahlen anfragen", "Obtener cifras exactas", "Pontos számokat kérek")} {ICON['arrow']}</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ BORROWING ============ -->
+    <div class="calc-panel" id="panel-borrow">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label>{t("span", "Your annual income (before tax)", "Ihr Jahreseinkommen (brutto)", "Sus ingresos anuales (brutos)", "Éves jövedelme (bruttó)")}<output id="borrow-inc1-out">£60,000</output></label>
+            <input type="range" id="borrow-inc1" min="10000" max="500000" step="1000" value="60000">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Second applicant income (optional)", "Einkommen zweite Person (optional)", "Ingresos del segundo titular (opcional)", "Második igénylő jövedelme (opcionális)")}<output id="borrow-inc2-out">£0</output></label>
+            <input type="range" id="borrow-inc2" min="0" max="500000" step="1000" value="0">
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          {t("h3", "Estimated borrowing range", "Geschätzter Kreditrahmen", "Rango de préstamo estimado", "Becsült hitelkeret")}
+          <div class="calc-big" id="borrow-big">£240,000 – £330,000</div>
+          <div class="calc-rows">
+            <div class="calc-row">{t("span", "Typical (4.5× income)", "Typisch (4,5× Einkommen)", "Típico (4,5× ingresos)", "Jellemző (4,5× jövedelem)")}<b id="borrow-typ">—</b></div>
+            <div class="calc-row">{t("span", "Some lenders (up to 5.5×)", "Einige Banken (bis 5,5×)", "Algunos bancos (hasta 5,5×)", "Egyes bankok (akár 5,5×)")}<b id="borrow-max">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Actual figures depend on outgoings, credit profile and lender criteria — complex income often supports more than the standard multiple." data-de="Tatsächliche Werte hängen von Ausgaben, Bonität und Bankkriterien ab — komplexes Einkommen ermöglicht oft mehr als das Standardvielfache." data-es="Las cifras reales dependen de gastos, perfil crediticio y criterios del banco — los ingresos complejos a menudo permiten más que el múltiplo estándar." data-hu="A tényleges összeg a kiadásoktól, hitelprofiltól és banki feltételektől függ — összetett jövedelem gyakran többet tesz lehetővé a szokásos szorzónál.">Actual figures depend on outgoings, credit profile and lender criteria — complex income often supports more than the standard multiple.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm">{t("span", "Check my real maximum", "Mein echtes Maximum prüfen", "Comprobar mi máximo real", "Valós maximumom ellenőrzése")} {ICON['arrow']}</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SDLT ============ -->
+    <div class="calc-panel" id="panel-sdlt">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label>{t("span", "Purchase price", "Kaufpreis", "Precio de compra", "Vételár")}<output id="sdlt-price-out">£350,000</output></label>
+            <input type="range" id="sdlt-price" min="50000" max="3000000" step="5000" value="350000">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Buyer type", "Käufertyp", "Tipo de comprador", "Vásárló típusa")}</label>
+            {seg("sdlt-type", [("mover","Home mover","Umzügler","Comprador estándar","Költöző"),("ftb","First-time buyer","Erstkäufer","Primer comprador","Első vásárló"),("additional","Additional property","Zusatzimmobilie","Propiedad adicional","További ingatlan")])}
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          {t("h3", "Stamp duty payable", "Zu zahlende Steuer", "Impuesto a pagar", "Fizetendő illeték")}
+          <div class="calc-big" id="sdlt-big">£7,500</div>
+          <div class="calc-rows" id="sdlt-bands"></div>
+          <p class="calc-note" data-en="England &amp; Northern Ireland rates from April 2025. Additional-property surcharge +5%. Scotland (LBTT) and Wales (LTT) differ." data-de="Sätze für England &amp; Nordirland ab April 2025. Zuschlag für Zusatzimmobilien +5%. Schottland (LBTT) und Wales (LTT) weichen ab." data-es="Tarifas de Inglaterra e Irlanda del Norte desde abril de 2025. Recargo por propiedad adicional +5%. Escocia (LBTT) y Gales (LTT) difieren." data-hu="Anglia és Észak-Írország 2025. áprilisi kulcsai. További ingatlan felára +5%. Skócia (LBTT) és Wales (LTT) eltér.">England &amp; Northern Ireland rates from April 2025. Additional-property surcharge +5%. Scotland (LBTT) and Wales (LTT) differ.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm">{t("span", "Plan the full purchase cost", "Gesamtkosten planen", "Planificar el coste total", "Teljes költség tervezése")} {ICON['arrow']}</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ BTL ============ -->
+    <div class="calc-panel" id="panel-btl">
+      <div class="calc-grid">
+        <div class="calc-inputs reveal-item">
+          <div class="calc-field">
+            <label>{t("span", "Expected monthly rent", "Erwartete Monatsmiete", "Alquiler mensual previsto", "Várható havi bérleti díj")}<output id="btl-rent-out">£1,500</output></label>
+            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1500">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Stress test rate (%)", "Stresstest-Zinssatz (%)", "Tipo de estrés (%)", "Stresszteszt kamat (%)")}<output id="btl-stress-out">5.5%</output></label>
+            <input type="range" id="btl-stress" min="3" max="10" step="0.25" value="5.5">
+          </div>
+          <div class="calc-field">
+            <label>{t("span", "Rental cover requirement (ICR)", "Mietdeckungsquote (ICR)", "Cobertura exigida (ICR)", "Fedezettségi követelmény (ICR)")}</label>
+            {seg("btl-icr", [("125","125% — basic-rate / SPV","125% — Basissteuersatz / SPV","125% — tipo básico / SPV","125% — alapkulcs / cég"),("145","145% — higher-rate","145% — Spitzensteuersatz","145% — tipo alto","145% — magasabb kulcs")])}
+          </div>
+        </div>
+        <div class="calc-result reveal-item">
+          {t("h3", "Maximum supportable loan", "Maximal tragfähiges Darlehen", "Préstamo máximo sostenible", "Maximális finanszírozható hitel")}
+          <div class="calc-big" id="btl-big">£261,000</div>
+          <div class="calc-rows">
+            <div class="calc-row">{t("span", "Annual rent", "Jahresmiete", "Alquiler anual", "Éves bérleti díj")}<b id="btl-annual">—</b></div>
+            <div class="calc-row">{t("span", "Rent needed at this loan", "Erforderliche Miete", "Alquiler necesario", "Szükséges bérleti díj")}<b id="btl-needed">—</b></div>
+          </div>
+          <p class="calc-note" data-en="Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further." data-de="Stresszinsen und ICR-Anforderungen variieren je nach Bank — Top-Slicing mit Privateinkommen kann das Maximum erhöhen." data-es="Los tipos de estrés e ICR varían según el banco — el top-slicing con ingresos personales puede aumentar el máximo." data-hu="A stresszkamat és az ICR bankonként eltér — a személyes jövedelemmel való kiegészítés tovább emelheti a maximumot.">Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further.</p>
+          <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm">{t("span", "Model my portfolio", "Mein Portfolio modellieren", "Modelar mi cartera", "Portfólióm modellezése")} {ICON['arrow']}</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{cta_band("Numbers are the start, not the answer", "Zahlen sind der Anfang, nicht die Antwort", "Los números son el inicio, no la respuesta", "A számok a kezdet, nem a válasz",
+          "A calculator cannot see lender criteria, your income structure or next year's plans. A twenty-minute conversation can.",
+          "Ein Rechner kennt weder Bankkriterien noch Ihre Einkommensstruktur oder Ihre Pläne. Ein zwanzigminütiges Gespräch schon.",
+          "Una calculadora no ve los criterios del banco, su estructura de ingresos ni sus planes. Una conversación de veinte minutos, sí.",
+          "Egy kalkulátor nem látja a banki feltételeket, a jövedelmi szerkezetét és a jövő évi terveit. Egy húszperces beszélgetés igen.")}
+</main>
+<script src="/js/calculators.js" defer></script>
+"""
+    html += footer()
+    open("calculators.html", "w").write(html)
+
 # =====================================================================
 # RUN
 # =====================================================================
@@ -327,6 +493,7 @@ if __name__ == "__main__":
     os.makedirs("blog/posts/images", exist_ok=True)
     P.build_index()
     P.build_all_services()
+    P.build_contractors()
     P.build_residential()
     P.build_remaining_services()
     build_about()
@@ -336,6 +503,7 @@ if __name__ == "__main__":
     legal_page("terms", "Terms of Business | Agnes Mortgage",
                "Terms of business for Agnes Mortgage: regulation, fees, complaints and FSCS coverage.",
                "Terms of Business", TERMS_BODY)
+    build_calculators()
     build_404()
     build_blog_index()
     for p in POSTS:
