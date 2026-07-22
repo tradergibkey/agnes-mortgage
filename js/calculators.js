@@ -115,14 +115,27 @@
 
   /* ---------- 4. buy-to-let ICR ---------- */
   function calcBtl() {
+    var value = parseFloat(document.getElementById("btl-value").value);
     var rent = parseFloat(document.getElementById("btl-rent").value);
-    var stress = parseFloat(document.getElementById("btl-stress").value) / 100;
-    var icr = parseFloat(segValue("btl-icr")) / 100;
-    var annualRent = rent * 12;
-    var maxLoan = annualRent / (icr * stress);
-    document.getElementById("btl-big").textContent = gbp(maxLoan);
-    document.getElementById("btl-annual").textContent = gbp(annualRent);
-    document.getElementById("btl-needed").textContent = gbp((maxLoan * stress * icr) / 12) + " / mo";
+    var tax = segValue("btl-tax");
+    var stressRate = 0.055; // 5.5% stress test
+    var icr = (tax === "higher") ? 1.45 : 1.25; // 125% basic/Ltd, 145% higher
+    var ltv = 0.75;
+    var loan = value * ltv;
+    var deposit = value - loan;
+    var monthlyMortgage = (loan * stressRate) / 12;
+    var rentNeeded = monthlyMortgage * icr;
+    var passes = rent >= rentNeeded;
+    document.getElementById("btl-loan").textContent = gbp(loan);
+    document.getElementById("btl-deposit").textContent = gbp(deposit);
+    document.getElementById("btl-monthly").textContent = gbp(monthlyMortgage) + " / mo";
+    document.getElementById("btl-needed").textContent = gbp(rentNeeded) + " / mo";
+    document.getElementById("btl-big").textContent = passes ? "✓ Rent covers the mortgage" : "✗ Rent falls short";
+    document.getElementById("btl-big").style.background = passes
+      ? "linear-gradient(120deg,#7ecba1,#2ecc71)" : "linear-gradient(120deg,#e88,#c0392b)";
+    document.getElementById("btl-big").style.webkitBackgroundClip = "text";
+    document.getElementById("btl-big").style.backgroundClip = "text";
+    document.getElementById("btl-big").style.color = "transparent";
   }
 
   function recalcAll() {
@@ -137,8 +150,8 @@
   bindRange("borrow-inc1", "borrow-inc1-out", gbp);
   bindRange("borrow-inc2", "borrow-inc2-out", gbp);
   bindRange("sdlt-price", "sdlt-price-out", gbp);
+  bindRange("btl-value", "btl-value-out", gbp);
   bindRange("btl-rent", "btl-rent-out", gbp);
-  bindRange("btl-stress", "btl-stress-out", pct1);
 
   recalcAll();
 })();
