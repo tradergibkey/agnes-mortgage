@@ -126,7 +126,7 @@ def build_index():
          "Portfólióval rendelkező bérbeadók. Cégvezetők. Nagy vagyonú családok. Külföldről vásárló expatok. Az összetett jövedelem a mindennapjaink — strukturáljuk, bemutatjuk és a megfelelő hitelezőnél helyezzük el a teljes brit piacon.")}
       <div class="hero-actions">
         <a href="/#contact" class="btn btn-gold">{t("span", "Request a consultation", "Beratung anfragen", "Solicitar consulta", "Konzultáció kérése")} {ICON['arrow']}</a>
-        <a href="/about" class="btn btn-ghost">{t("span", "Meet your broker", "Ihren Makler", "Conozca a su bróker", "Ismerje meg brókerét")}</a>
+        <a href="/about" class="btn btn-ghost">{t("span", "Meet your broker", "Ihr Makler", "Conozca a su bróker", "Ismerje meg brókerét")}</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><b>100+</b>{t("span", "lenders across the market", "Kreditgeber am Markt", "prestamistas en el mercado", "hitelező a piacon")}</div>
@@ -166,7 +166,7 @@ def build_index():
     <div class="split">
       <div class="split-img reveal-item"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage broker (portrait coming soon)" loading="lazy"></div>
       <div class="split-body reveal-item">
-        {t("span", "Your broker", "Ihren Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
+        {t("span", "Your broker", "Ihr Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
         {t("h2", "Advice with a name, not a call centre", "Beratung mit Namen — kein Callcenter", "Asesoría con nombre propio, no un call center", "Tanácsadás névvel — nem call center")}
         {t("p", "Agnes Mortgage is built on one principle: clients with complex finances deserve one senior broker who knows their whole picture — every company, every property, every plan — and stays with them for years, not one transaction.",
            "Agnes Mortgage basiert auf einem Prinzip: Kunden mit komplexen Finanzen verdienen einen erfahrenen Makler, der ihr gesamtes Bild kennt — jede Firma, jede Immobilie, jeden Plan — und über Jahre an ihrer Seite bleibt.",
@@ -411,7 +411,7 @@ def build_contractors():
            "Egy napi £500-ot kereső szerződéses £180.000-tól £450.000-ig bármennyire jogosult lehet, attól függően, hogyan értékeli a bank a jövedelmét. Napidíj-éves vetítés, ernyőcéges bérjegyzék vagy céges beszámoló — mindegyikhez vannak speciális bankok.")),
          [("Day-rate contractors assessed at annualised contract value (×46 or ×48 weeks)", "Tagessatz-Auftragnehmer bewertet auf Jahresbasis (×46 oder ×48 Wochen)", "Contratistas de tarifa diaria evaluados por valor anualizado (×46 o ×48 semanas)", "Napidíjas szerződésesek éves vetítéssel értékelve (×46 vagy ×48 hét)"),
           ("Umbrella company contractors using PAYE payslips", "Umbrella-Auftragnehmer mit PAYE-Gehaltsabrechnungen", "Contratistas umbrella con nóminas PAYE", "Ernyőcéges szerződésesek PAYE bérjegyzékkel"),
-          ("Ltd company contractors assessed on salary plus dividends or retained profit", "GmbH-Auftragnehmer bewertet auf Gehalt plus Dividenden oder einbehaltenen Gewinn", "Contratistas Ltd evaluados por salario más dividendos o beneficio retenido", "Kft.-s szerződésesek fizetés + osztalék vagy visszatartott nyereség alapján"),
+          ("Ltd company contractors assessed on salary plus dividends or net profit", "GmbH-Auftragnehmer bewertet auf Gehalt plus Dividenden oder Nettogewinn", "Contratistas Ltd evaluados por salario más dividendos o beneficio neto", "Kft.-s szerződésesek fizetés + osztalék vagy nettó nyereség alapján"),
           ("CIS subcontractors in construction and trades", "CIS-Subunternehmer im Baugewerbe", "Subcontratistas CIS en construcción", "CIS alvállalkozók az építőiparban"),
           ("Contract gaps, multiple contracts and IR35 — navigated with the right lender", "Vertragslücken, mehrere Verträge und IR35 — beim richtigen Kreditgeber kein Hindernis", "Vacíos entre contratos, múltiples contratos e IR35 — navegados con el banco adecuado", "Szerződés-szünetek, több szerződés és IR35 — a megfelelő bankkal kezelhetők")]),
         ((("Day rate is the fastest path to maximum borrowing", "Tagessatz ist der schnellste Weg zur maximalen Darlehenssumme", "La tarifa diaria es la vía más rápida al máximo préstamo", "A napidíj a leggyorsabb út a maximális hitelösszeghez"),
@@ -465,10 +465,10 @@ def build_residential():
           ("Non-standard construction: timber frame, steel frame, flat roof, listed buildings", "Sonderbauweisen: Holzrahmen, Stahlrahmen, Flachdach, denkmalgeschützte Gebäude", "Construcción no estándar: madera, acero, techo plano, edificios protegidos", "Nem szabványos építés: fa váz, acél váz, lapos tető, műemléképületek"),
           ("Interest-only residential on higher incomes with clear repayment strategy", "Tilgungsfreie Wohnkredite bei höherem Einkommen mit klarer Rückzahlungsstrategie", "Solo interés residencial con ingresos altos y estrategia de reembolso clara", "Csak-kamat lakossági hitel magasabb jövedelemnél, világos visszafizetési stratégiával")]),
         ((("The right lender, not just the cheapest rate", "Die richtige Bank, nicht nur der günstigste Zins", "El banco adecuado, no solo el tipo más barato", "A megfelelő bank, nem csak a legolcsóbb kamat"),
-          ("A mortgage comparison site ranks by rate. An adviser ranks by likelihood of approval, speed to offer, flexibility on income and property type, and total cost including fees. When your case has any complexity at all, the cheapest headline rate is rarely the cheapest mortgage.",
-           "Ein Vergleichsportal sortiert nach Zins. Eine Beraterin sortiert nach Genehmigungschance, Bearbeitungstempo, Flexibilität bei Einkommen und Objektart sowie Gesamtkosten inkl. Gebühren. Bei jeder Komplexität ist der günstigste Schlagzeilenzins selten die günstigste Hypothek.",
-           "Un comparador ordena por tipo de interés. Una asesora ordena por probabilidad de aprobación, rapidez de oferta, flexibilidad con ingresos y tipo de propiedad, y coste total con comisiones. Con cualquier complejidad, el tipo más barato del titular rara vez es la hipoteca más barata.",
-           "Egy összehasonlító oldal kamat szerint rangsorol. Egy tanácsadó a jóváhagyás valószínűsége, az ajánlat gyorsasága, a jövedelem és ingatlantípus rugalmassága, valamint a díjakkal együtt számított teljes költség alapján rangsorol. Ha bármilyen összetettség van, a legolcsóbb címlapkamat ritkán a legolcsóbb jelzáloghitel."),
+          ("A mortgage comparison site ranks by rate. A broker ranks by likelihood of approval, speed to offer, flexibility on income and property type, and total cost including fees. When your case has any complexity at all, the cheapest headline rate is rarely the cheapest mortgage.",
+           "Ein Vergleichsportal sortiert nach Zins. Ein Makler sortiert nach Genehmigungschance, Bearbeitungstempo, Flexibilität bei Einkommen und Objektart sowie Gesamtkosten inkl. Gebühren. Bei jeder Komplexität ist der günstigste Schlagzeilenzins selten die günstigste Hypothek.",
+           "Un comparador ordena por tipo de interés. Un bróker ordena por probabilidad de aprobación, rapidez de oferta, flexibilidad con ingresos y tipo de propiedad, y coste total con comisiones. Con cualquier complejidad, el tipo más barato del titular rara vez es la hipoteca más barata.",
+           "Egy összehasonlító oldal kamat szerint rangsorol. Egy bróker a jóváhagyás valószínűsége, az ajánlat gyorsasága, a jövedelem és ingatlantípus rugalmassága, valamint a díjakkal együtt számított teljes költség alapján rangsorol. Ha bármilyen összetettség van, a legolcsóbb címlapkamat ritkán a legolcsóbb jelzáloghitel."),
           ("We explain the trade-offs plainly, model two or three realistic routes with live pricing, and let you choose with full visibility. No pressure, no clock.",
            "Wir erklären die Abwägungen klar, modellieren zwei oder drei realistische Wege mit aktuellen Konditionen und lassen Sie mit voller Transparenz entscheiden.",
            "Explicamos las alternativas con claridad, modelamos dos o tres vías realistas con precios actuales y le dejamos elegir con total visibilidad.",

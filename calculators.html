@@ -190,26 +190,28 @@
       <div class="calc-grid">
         <div class="calc-inputs reveal-item">
           <div class="calc-field">
-            <label><span data-en="Expected monthly rent" data-de="Erwartete Monatsmiete" data-es="Alquiler mensual previsto" data-hu="Várható havi bérleti díj">Expected monthly rent</span><output id="btl-rent-out">£1,500</output></label>
-            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1500">
+            <label><span data-en="Property value" data-de="Immobilienwert" data-es="Valor de la propiedad" data-hu="Ingatlan értéke">Property value</span><output id="btl-value-out">£250,000</output></label>
+            <input type="range" id="btl-value" min="50000" max="3000000" step="5000" value="250000">
           </div>
           <div class="calc-field">
-            <label><span data-en="Stress test rate (%)" data-de="Stresstest-Zinssatz (%)" data-es="Tipo de estrés (%)" data-hu="Stresszteszt kamat (%)">Stress test rate (%)</span><output id="btl-stress-out">5.5%</output></label>
-            <input type="range" id="btl-stress" min="3" max="10" step="0.25" value="5.5">
+            <label><span data-en="Expected monthly rent" data-de="Erwartete Monatsmiete" data-es="Alquiler mensual previsto" data-hu="Várható havi bérleti díj">Expected monthly rent</span><output id="btl-rent-out">£1,200</output></label>
+            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1200">
           </div>
           <div class="calc-field">
-            <label><span data-en="Rental cover requirement (ICR)" data-de="Mietdeckungsquote (ICR)" data-es="Cobertura exigida (ICR)" data-hu="Fedezettségi követelmény (ICR)">Rental cover requirement (ICR)</span></label>
-            <div class="calc-seg" id="btl-icr"><button type="button" data-val="125" class="active" data-en="125% — basic-rate / SPV" data-de="125% — Basissteuersatz / SPV" data-es="125% — tipo básico / SPV" data-hu="125% — alapkulcs / cég">125% — basic-rate / SPV</button><button type="button" data-val="145" data-en="145% — higher-rate" data-de="145% — Spitzensteuersatz" data-es="145% — tipo alto" data-hu="145% — magasabb kulcs">145% — higher-rate</button></div>
+            <label><span data-en="Taxpayer type" data-de="Steuerstatus" data-es="Tipo de contribuyente" data-hu="Adózási státusz">Taxpayer type</span></label>
+            <div class="calc-seg" id="btl-tax"><button type="button" data-val="basic" class="active" data-en="Basic rate" data-de="Basissteuersatz" data-es="Tipo básico" data-hu="Alapkulcs">Basic rate</button><button type="button" data-val="higher" data-en="Higher rate" data-de="Spitzensteuersatz" data-es="Tipo alto" data-hu="Magasabb kulcs">Higher rate</button><button type="button" data-val="ltd" data-en="Ltd / SPV" data-de="GmbH / SPV" data-es="Ltd / SPV" data-hu="Kft. / SPV">Ltd / SPV</button></div>
           </div>
         </div>
         <div class="calc-result reveal-item">
-          <h3 data-en="Maximum supportable loan" data-de="Maximal tragfähiges Darlehen" data-es="Préstamo máximo sostenible" data-hu="Maximális finanszírozható hitel">Maximum supportable loan</h3>
-          <div class="calc-big" id="btl-big">£261,000</div>
+          <h3 data-en="Buy-to-let assessment" data-de="Buy-to-Let-Bewertung" data-es="Evaluación buy-to-let" data-hu="Buy-to-let értékelés">Buy-to-let assessment</h3>
+          <div class="calc-big" id="btl-big">—</div>
           <div class="calc-rows">
-            <div class="calc-row"><span data-en="Annual rent" data-de="Jahresmiete" data-es="Alquiler anual" data-hu="Éves bérleti díj">Annual rent</span><b id="btl-annual">—</b></div>
-            <div class="calc-row"><span data-en="Rent needed at this loan" data-de="Erforderliche Miete" data-es="Alquiler necesario" data-hu="Szükséges bérleti díj">Rent needed at this loan</span><b id="btl-needed">—</b></div>
+            <div class="calc-row"><span data-en="Mortgage at 75% LTV" data-de="Hypothek bei 75% LTV" data-es="Hipoteca al 75% LTV" data-hu="Jelzáloghitel 75% LTV-nél">Mortgage at 75% LTV</span><b id="btl-loan">—</b></div>
+            <div class="calc-row"><span data-en="Deposit required (25%)" data-de="Eigenkapital (25%)" data-es="Entrada necesaria (25%)" data-hu="Szükséges önerő (25%)">Deposit required (25%)</span><b id="btl-deposit">—</b></div>
+            <div class="calc-row"><span data-en="Monthly mortgage at stress rate" data-de="Monatsrate bei Stresstest" data-es="Cuota mensual al tipo de estrés" data-hu="Havi törlesztő stresszkamat mellett">Monthly mortgage at stress rate</span><b id="btl-monthly">—</b></div>
+            <div class="calc-row"><span data-en="Rent needed to pass ICR" data-de="Erforderliche Miete für ICR" data-es="Alquiler necesario para ICR" data-hu="Szükséges bérleti díj az ICR-hez">Rent needed to pass ICR</span><b id="btl-needed">—</b></div>
           </div>
-          <p class="calc-note" data-en="Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further." data-de="Stresszinsen und ICR-Anforderungen variieren je nach Bank — Top-Slicing mit Privateinkommen kann das Maximum erhöhen." data-es="Los tipos de estrés e ICR varían según el banco — el top-slicing con ingresos personales puede aumentar el máximo." data-hu="A stresszkamat és az ICR bankonként eltér — a személyes jövedelemmel való kiegészítés tovább emelheti a maximumot.">Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further.</p>
+          <p class="calc-note" data-en="Based on 75% LTV, 5.5% stress rate. ICR: 125% for basic-rate and Ltd/SPV, 145% for higher-rate taxpayers. Actual criteria vary by lender." data-de="Basierend auf 75% LTV, 5,5% Stresszins. ICR: 125% für Basissteuersatz und GmbH/SPV, 145% für Spitzensteuersatz. Kriterien variieren je nach Bank." data-es="Basado en 75% LTV, 5,5% tipo de estrés. ICR: 125% para tipo básico y Ltd/SPV, 145% para tipo alto. Los criterios varían según el banco." data-hu="75% LTV, 5,5% stresszkamat alapján. ICR: 125% alapkulcs és Kft./SPV esetén, 145% magasabb kulcsnál. A tényleges feltételek bankonként eltérnek.">Based on 75% LTV, 5.5% stress rate. ICR: 125% for basic-rate and Ltd/SPV, 145% for higher-rate taxpayers. Actual criteria vary by lender.</p>
           <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm"><span data-en="Model my portfolio" data-de="Mein Portfolio modellieren" data-es="Modelar mi cartera" data-hu="Portfólióm modellezése">Model my portfolio</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>

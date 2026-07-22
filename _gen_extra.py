@@ -22,8 +22,8 @@ def build_about():
   <div class="container">
     {crumb}
     {t("h1", "Advice with a name: Agnes", "Beratung mit Namen: Agnes", "Asesoría con nombre propio: Agnes", "Tanácsadás névvel: Agnes")}
-    {t("p", "One senior adviser. Your whole financial picture. A relationship measured in years, not transactions.",
-       "Eine erfahrene Beraterin. Ihr gesamtes Finanzbild. Eine Beziehung, die in Jahren gemessen wird, nicht in Transaktionen.",
+    {t("p", "One senior broker. Your whole financial picture. A relationship measured in years, not transactions.",
+       "Ein erfahrener Makler. Ihr gesamtes Finanzbild. Eine Beziehung, die in Jahren gemessen wird, nicht in Transaktionen.",
        "Un bróker sénior. Su panorama financiero completo. Una relación medida en años, no en transacciones.",
        "Egy vezető bróker. Az Ön teljes pénzügyi képe. Egy kapcsolat, amit években mérünk, nem ügyletekben.")}
   </div>
@@ -240,7 +240,7 @@ def post_card(p):
 def build_blog_index():
     bc_json, crumb = breadcrumb("Insights", "Insights", "Blog", "Blog", "blog")
     html = head("Insights & Guides — UK Mortgage Intelligence | Agnes Mortgage",
-                "Plain-spoken guides on buy-to-let structuring, expat lending, HMO finance and remortgage timing — from a whole-of-market UK adviser.",
+                "Plain-spoken guides on buy-to-let structuring, expat lending, HMO finance and remortgage timing — from a whole-of-market UK broker.",
                 "blog", jsonld=bc_json)
     html += lang_gate() + header("blog")
     cards = "\n".join(post_card(p) for p in POSTS)
@@ -306,7 +306,7 @@ def build_post(p, template=False):
     </div>
     <div style="max-width:780px;margin:40px auto 0">
       <div class="band-dark">
-        <h2>Talk this through with an adviser</h2>
+        <h2>Talk this through with a broker</h2>
         <p>Every article generalises; your case is specific. A private consultation costs nothing and commits you to nothing.</p>
         <a href="/#contact" class="btn btn-gold">Request a consultation {ICON['arrow']}</a>
       </div>
@@ -446,26 +446,28 @@ def build_calculators():
       <div class="calc-grid">
         <div class="calc-inputs reveal-item">
           <div class="calc-field">
-            <label>{t("span", "Expected monthly rent", "Erwartete Monatsmiete", "Alquiler mensual previsto", "Várható havi bérleti díj")}<output id="btl-rent-out">£1,500</output></label>
-            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1500">
+            <label>{t("span", "Property value", "Immobilienwert", "Valor de la propiedad", "Ingatlan értéke")}<output id="btl-value-out">£250,000</output></label>
+            <input type="range" id="btl-value" min="50000" max="3000000" step="5000" value="250000">
           </div>
           <div class="calc-field">
-            <label>{t("span", "Stress test rate (%)", "Stresstest-Zinssatz (%)", "Tipo de estrés (%)", "Stresszteszt kamat (%)")}<output id="btl-stress-out">5.5%</output></label>
-            <input type="range" id="btl-stress" min="3" max="10" step="0.25" value="5.5">
+            <label>{t("span", "Expected monthly rent", "Erwartete Monatsmiete", "Alquiler mensual previsto", "Várható havi bérleti díj")}<output id="btl-rent-out">£1,200</output></label>
+            <input type="range" id="btl-rent" min="300" max="10000" step="50" value="1200">
           </div>
           <div class="calc-field">
-            <label>{t("span", "Rental cover requirement (ICR)", "Mietdeckungsquote (ICR)", "Cobertura exigida (ICR)", "Fedezettségi követelmény (ICR)")}</label>
-            {seg("btl-icr", [("125","125% — basic-rate / SPV","125% — Basissteuersatz / SPV","125% — tipo básico / SPV","125% — alapkulcs / cég"),("145","145% — higher-rate","145% — Spitzensteuersatz","145% — tipo alto","145% — magasabb kulcs")])}
+            <label>{t("span", "Taxpayer type", "Steuerstatus", "Tipo de contribuyente", "Adózási státusz")}</label>
+            {seg("btl-tax", [("basic","Basic rate","Basissteuersatz","Tipo básico","Alapkulcs"),("higher","Higher rate","Spitzensteuersatz","Tipo alto","Magasabb kulcs"),("ltd","Ltd / SPV","GmbH / SPV","Ltd / SPV","Kft. / SPV")])}
           </div>
         </div>
         <div class="calc-result reveal-item">
-          {t("h3", "Maximum supportable loan", "Maximal tragfähiges Darlehen", "Préstamo máximo sostenible", "Maximális finanszírozható hitel")}
-          <div class="calc-big" id="btl-big">£261,000</div>
+          {t("h3", "Buy-to-let assessment", "Buy-to-Let-Bewertung", "Evaluación buy-to-let", "Buy-to-let értékelés")}
+          <div class="calc-big" id="btl-big">—</div>
           <div class="calc-rows">
-            <div class="calc-row">{t("span", "Annual rent", "Jahresmiete", "Alquiler anual", "Éves bérleti díj")}<b id="btl-annual">—</b></div>
-            <div class="calc-row">{t("span", "Rent needed at this loan", "Erforderliche Miete", "Alquiler necesario", "Szükséges bérleti díj")}<b id="btl-needed">—</b></div>
+            <div class="calc-row">{t("span", "Mortgage at 75% LTV", "Hypothek bei 75% LTV", "Hipoteca al 75% LTV", "Jelzáloghitel 75% LTV-nél")}<b id="btl-loan">—</b></div>
+            <div class="calc-row">{t("span", "Deposit required (25%)", "Eigenkapital (25%)", "Entrada necesaria (25%)", "Szükséges önerő (25%)")}<b id="btl-deposit">—</b></div>
+            <div class="calc-row">{t("span", "Monthly mortgage at stress rate", "Monatsrate bei Stresstest", "Cuota mensual al tipo de estrés", "Havi törlesztő stresszkamat mellett")}<b id="btl-monthly">—</b></div>
+            <div class="calc-row">{t("span", "Rent needed to pass ICR", "Erforderliche Miete für ICR", "Alquiler necesario para ICR", "Szükséges bérleti díj az ICR-hez")}<b id="btl-needed">—</b></div>
           </div>
-          <p class="calc-note" data-en="Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further." data-de="Stresszinsen und ICR-Anforderungen variieren je nach Bank — Top-Slicing mit Privateinkommen kann das Maximum erhöhen." data-es="Los tipos de estrés e ICR varían según el banco — el top-slicing con ingresos personales puede aumentar el máximo." data-hu="A stresszkamat és az ICR bankonként eltér — a személyes jövedelemmel való kiegészítés tovább emelheti a maximumot.">Lender stress rates and ICR requirements vary — top-slicing with personal income can lift the maximum further.</p>
+          <p class="calc-note" data-en="Based on 75% LTV, 5.5% stress rate. ICR: 125% for basic-rate and Ltd/SPV, 145% for higher-rate taxpayers. Actual criteria vary by lender." data-de="Basierend auf 75% LTV, 5,5% Stresszins. ICR: 125% für Basissteuersatz und GmbH/SPV, 145% für Spitzensteuersatz. Kriterien variieren je nach Bank." data-es="Basado en 75% LTV, 5,5% tipo de estrés. ICR: 125% para tipo básico y Ltd/SPV, 145% para tipo alto. Los criterios varían según el banco." data-hu="75% LTV, 5,5% stresszkamat alapján. ICR: 125% alapkulcs és Kft./SPV esetén, 145% magasabb kulcsnál. A tényleges feltételek bankonként eltérnek.">Based on 75% LTV, 5.5% stress rate. ICR: 125% for basic-rate and Ltd/SPV, 145% for higher-rate taxpayers. Actual criteria vary by lender.</p>
           <div class="calc-cta"><a href="/#contact" class="btn btn-gold btn-sm">{t("span", "Model my portfolio", "Mein Portfolio modellieren", "Modelar mi cartera", "Portfólióm modellezése")} {ICON['arrow']}</a></div>
         </div>
       </div>
