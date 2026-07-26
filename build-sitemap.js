@@ -8,7 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BASE = "https://agnes-mortgage.vercel.app"; // ← swap when the real domain goes live
+const BASE = "https://agnesmortgage.co.uk";
 
 const STATIC_PAGES = [
   { loc: "/", priority: "1.0", changefreq: "weekly" },

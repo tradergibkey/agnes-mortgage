@@ -2,10 +2,10 @@
 """Agnes Mortgage site generator — shared chrome. Build tool only, not shipped."""
 import html as _html
 
-BASE = "https://agnes-mortgage.vercel.app"
-PHONE_DISP = "+44 7700 900123"          # Ofcom-reserved fictional number — SWAP AT GO-LIVE
-PHONE_TEL = "+447700900123"
-WA = "https://wa.me/447700900123"
+BASE = "https://agnesmortgage.co.uk"
+PHONE_DISP = "+44 7944 318518"
+PHONE_TEL = "+447944318518"
+WA = "https://wa.me/447944318518"
 
 def esc(s):
     return _html.escape(s, quote=True)

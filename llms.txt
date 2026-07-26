@@ -6,22 +6,22 @@ Agnes Mortgage is a whole-of-market, FCA-regulated mortgage intermediary. The fi
 
 ## Services
 
-- Buy-to-let and portfolio landlord mortgages (https://agnes-mortgage.vercel.app/buy-to-let): finance for professional landlords from a first investment property to large portfolios; limited company (SPV) buy-to-let including transfers from personal name; portfolio remortgages coordinated across multiple properties and lenders; top-slicing; holiday lets and short-term letting models; capital raising against an existing portfolio.
-- HMO and multi-unit finance (https://agnes-mortgage.vercel.app/hmo-finance): specialist lending for licensed and large houses in multiple occupation (7+ rooms), multi-unit freehold blocks (MUFB), commercial/investment valuations where yield justifies them, refurbishment bridges with guaranteed term exits, and first-time HMO investors with landlord experience.
-- Contractor mortgages (https://agnes-mortgage.vercel.app/contractors): day-rate annualisation, umbrella company PAYE payslips, limited company accounts assessment, CIS subcontractors, IR35 navigation and contract-gap handling.
-- Expat and overseas buyer mortgages (https://agnes-mortgage.vercel.app/expat-mortgages): UK mortgages for British expats and foreign nationals living abroad; foreign-currency income with lender haircuts calculated in advance; thin UK credit files routed to the right lenders; fully remote process with multilingual document support.
-- Directors and self-employed mortgages (https://agnes-mortgage.vercel.app/self-employed): assessment on salary plus share of net profit including retained profits; one year of accounts accepted by selected lenders; contractor day-rate assessment; lumpy or declining profits handled with narrative underwriting.
-- High-net-worth and large loan mortgages (https://agnes-mortgage.vercel.app/high-net-worth): private bank lending, interest-only structures, multi-currency and complex income, lending well beyond £1m, arranged with discretion.
-- Remortgage and refinancing (https://agnes-mortgage.vercel.app/remortgage): rate-expiry tracking so clients never fall onto the standard variable rate, capital raising, product transfers priced honestly against the open market, and equity release toward the next purchase.
+- Buy-to-let and portfolio landlord mortgages (https://agnesmortgage.co.uk/buy-to-let): finance for professional landlords from a first investment property to large portfolios; limited company (SPV) buy-to-let including transfers from personal name; portfolio remortgages coordinated across multiple properties and lenders; top-slicing; holiday lets and short-term letting models; capital raising against an existing portfolio.
+- HMO and multi-unit finance (https://agnesmortgage.co.uk/hmo-finance): specialist lending for licensed and large houses in multiple occupation (7+ rooms), multi-unit freehold blocks (MUFB), commercial/investment valuations where yield justifies them, refurbishment bridges with guaranteed term exits, and first-time HMO investors with landlord experience.
+- Contractor mortgages (https://agnesmortgage.co.uk/contractors): day-rate annualisation, umbrella company PAYE payslips, limited company accounts assessment, CIS subcontractors, IR35 navigation and contract-gap handling.
+- Expat and overseas buyer mortgages (https://agnesmortgage.co.uk/expat-mortgages): UK mortgages for British expats and foreign nationals living abroad; foreign-currency income with lender haircuts calculated in advance; thin UK credit files routed to the right lenders; fully remote process with multilingual document support.
+- Directors and self-employed mortgages (https://agnesmortgage.co.uk/self-employed): assessment on salary plus share of net profit including retained profits; one year of accounts accepted by selected lenders; contractor day-rate assessment; lumpy or declining profits handled with narrative underwriting.
+- High-net-worth and large loan mortgages (https://agnesmortgage.co.uk/high-net-worth): private bank lending, interest-only structures, multi-currency and complex income, lending well beyond £1m, arranged with discretion.
+- Remortgage and refinancing (https://agnesmortgage.co.uk/remortgage): rate-expiry tracking so clients never fall onto the standard variable rate, capital raising, product transfers priced honestly against the open market, and equity release toward the next purchase.
 
 ## Key pages
 
-- Mortgage calculators (https://agnes-mortgage.vercel.app/calculators): free instant tools — monthly repayment (capital or interest-only), borrowing power at standard income multiples, England & Northern Ireland stamp duty (SDLT) with first-time-buyer and additional-property rates, and buy-to-let rental cover (ICR) with stress-rate modelling.
+- Mortgage calculators (https://agnesmortgage.co.uk/calculators): free instant tools — monthly repayment (capital or interest-only), borrowing power at standard income multiples, England & Northern Ireland stamp duty (SDLT) with first-time-buyer and additional-property rates, and buy-to-let rental cover (ICR) with stress-rate modelling.
 
-- Homepage: https://agnes-mortgage.vercel.app/
-- Meet the broker: https://agnes-mortgage.vercel.app/about
-- Insights blog (English): https://agnes-mortgage.vercel.app/blog
-- Contact: https://agnes-mortgage.vercel.app/#contact
+- Homepage: https://agnesmortgage.co.uk/
+- Meet the broker: https://agnesmortgage.co.uk/about
+- Insights blog (English): https://agnesmortgage.co.uk/blog
+- Contact: https://agnesmortgage.co.uk/#contact
 
 ## Facts
 
@@ -30,4 +30,4 @@ Agnes Mortgage is a whole-of-market, FCA-regulated mortgage intermediary. The fi
 - Regulation: authorised and regulated by the Financial Conduct Authority. The FCA does not regulate most buy-to-let mortgages.
 - Standard risk warning: your home may be repossessed if you do not keep up repayments on your mortgage.
 - First consultation: private, free and without obligation.
-- Contact: phone and WhatsApp +44 7700 900123, or the website contact form.
+- Contact: phone and WhatsApp +44 7944 318518, or the website contact form.
