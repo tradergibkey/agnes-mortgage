@@ -46,7 +46,7 @@ def build_about():
            "[BIO 2. BEKEZDÉS — személyes szál: nyelvek, nemzetközi háttér, ügyfélfilozófia.]")}
         <div class="badge-row">
           <span class="badge">{ICON['shield']} CeMAP [QUALIFICATION]</span>
-          <span class="badge">{ICON['shield']} FCA [FCA NUMBER]</span>
+          <span class="badge">{ICON['shield']} FCA 750470</span>
           <span class="badge">🌍 EN · DE · ES · HU</span>
         </div>
       </div>
@@ -119,7 +119,7 @@ PRIVACY_BODY = """
 <div class="post-body">
 <p><em>Last updated: [DATE]</em></p>
 <h2>1. Who we are</h2>
-<p>Agnes Mortgage is a trading name of [LEGAL ENTITY NAME LTD], registered in England and Wales (company number [COMPANY NUMBER]), registered office [REGISTERED OFFICE ADDRESS]. We are the data controller for personal data collected through this website. Contact: [DATA CONTACT EMAIL / POSTAL ADDRESS].</p>
+<p>Agnes Mortgage is a trading name of Milla Mortgages Ltd, registered in England and Wales (company number 08461134), registered office 420a Streatham High Road, London, SW16 3SN. We are the data controller for personal data collected through this website. Contact: [DATA CONTACT EMAIL / POSTAL ADDRESS].</p>
 <h2>2. What we collect</h2>
 <p>Information you submit through our contact form (name, email address, phone number, enquiry topic and message), and basic technical data necessary to deliver the website securely (IP address, browser type) processed by our hosting provider.</p>
 <h2>3. Why we process it (lawful bases)</h2>
@@ -139,7 +139,7 @@ TERMS_BODY = """
 <div class="post-body">
 <p><em>Last updated: [DATE]</em></p>
 <h2>1. About us and regulation</h2>
-<p>Agnes Mortgage is a trading name of [LEGAL ENTITY NAME LTD], authorised and regulated by the Financial Conduct Authority (FCA number [FCA NUMBER]). You can verify our status on the Financial Services Register at register.fca.org.uk. The FCA does not regulate most buy-to-let mortgages, commercial lending or tax advice.</p>
+<p>Agnes Mortgage is a trading name of Milla Mortgages Ltd, authorised and regulated by the Financial Conduct Authority (FCA number 750470). You can verify our status on the Financial Services Register at register.fca.org.uk. The FCA does not regulate most buy-to-let mortgages, commercial lending or tax advice.</p>
 <h2>2. Our service</h2>
 <p>We provide advised mortgage intermediation on a whole-of-market basis: we assess your circumstances, recommend suitable products from across the market, and manage your application through to completion. We are not tied to any lender.</p>
 <h2>3. Fees</h2>
