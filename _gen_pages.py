@@ -164,7 +164,7 @@ def build_index():
 <section class="section" style="padding-top:0">
   <div class="container">
     <div class="split">
-      <div class="split-img reveal-item"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage broker (portrait coming soon)" loading="lazy"></div>
+      <div class="split-img reveal-item"><img src="/img/agnes-siry.webp" alt="Agnes Siry, mortgage broker at Agnes Mortgage" width="1200" height="1405" loading="lazy"></div>
       <div class="split-body reveal-item">
         {t("span", "Your broker", "Ihr Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
         {t("h2", "Advice with a name, not a call centre", "Beratung mit Namen — kein Callcenter", "Asesoría con nombre propio, no un call center", "Tanácsadás névvel — nem call center")}

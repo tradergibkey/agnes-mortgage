@@ -9,8 +9,8 @@ import _gen_pages as P
 def build_about():
     bc_json, crumb = breadcrumb("Meet Agnes", "Über Agnes", "Conozca a Agnes", "Ismerje meg Agnest", "about")
     jsonld = bc_json + f"""<script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Person","name":"[ADVISER FULL NAME]","jobTitle":"Mortgage Broker",
-"worksFor":{{"@type":"FinancialService","name":"Agnes Mortgage","url":"{BASE}"}},"url":"{BASE}/about"}}
+{{"@context":"https://schema.org","@type":"Person","name":"Agnes Siry","image":"{BASE}/img/agnes-siry.webp","jobTitle":"Mortgage Broker",
+"worksFor":{{"@type":"FinancialService","name":"Agnes Mortgage","url":"{BASE}"}},"hasCredential":{{"@type":"EducationalOccupationalCredential","credentialCategory":"certification","name":"CeMAP 3"}},"url":"{BASE}/about"}}
 </script>"""
     html = head(
         "Meet Agnes — Your Private Mortgage Broker | Agnes Mortgage",
@@ -32,20 +32,32 @@ def build_about():
 <section class="section">
   <div class="container">
     <div class="adviser-card reveal-item">
-      <div class="adviser-photo"><img src="/img/about-placeholder.jpg" alt="Agnes — private mortgage broker (professional portrait coming soon)"></div>
+      <div class="adviser-photo"><img src="/img/agnes-siry.webp" alt="Agnes Siry, mortgage broker at Agnes Mortgage" width="1200" height="1405"></div>
       <div>
         {t("span", "Your broker", "Ihr Makler", "Su bróker", "Az Ön brókere", cls="eyebrow")}
-        {t("h2", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]", "[ADVISER FULL NAME]")}
-        {t("p", "[BIO PARAGRAPH 1 — professional background, years in mortgage advice, previous roles, qualifications such as CeMAP. To be written after the intake interview.]",
-           "[BIO ABSATZ 1 — beruflicher Werdegang, Jahre in der Hypothekenberatung, frühere Positionen, Qualifikationen. Wird nach dem Interview verfasst.]",
-           "[PÁRRAFO BIO 1 — trayectoria profesional, años en asesoría hipotecaria, puestos anteriores, cualificaciones. Se redactará tras la entrevista.]",
-           "[BIO 1. BEKEZDÉS — szakmai háttér, jelzálog-tanácsadói évek, korábbi pozíciók, képesítések. Az interjú után kerül megírásra.]")}
-        {t("p", "[BIO PARAGRAPH 2 — personal angle: languages, international background, why business owners / landlords / expats, approach to clients.]",
-           "[BIO ABSATZ 2 — persönlicher Blickwinkel: Sprachen, internationaler Hintergrund, Kundenphilosophie.]",
-           "[PÁRRAFO BIO 2 — enfoque personal: idiomas, trayectoria internacional, filosofía con los clientes.]",
-           "[BIO 2. BEKEZDÉS — személyes szál: nyelvek, nemzetközi háttér, ügyfélfilozófia.]")}
+        {t("h2", "Agnes Siry", "Agnes Siry", "Agnes Siry", "Agnes Siry")}
+        {t("p", "Hi, I'm Agnes. Over the last 17+ years I've worked across financial services — mortgages, pensions, investments, accounting, protection — and along the way I found where I actually belong: helping people get the right mortgage, with the right cover behind it.",
+           "Hallo, ich bin Agnes. In den letzten 17+ Jahren habe ich in verschiedenen Bereichen der Finanzdienstleistungen gearbeitet — Hypotheken, Renten, Investments, Buchhaltung, Absicherung — und dabei habe ich gefunden, wo ich wirklich hingehöre: Menschen zur richtigen Hypothek zu verhelfen, mit der richtigen Absicherung dahinter.",
+           "Hola, soy Agnes. En los últimos 17+ años he trabajado en varias áreas de los servicios financieros — hipotecas, pensiones, inversiones, contabilidad, protección — y en el camino encontré dónde realmente pertenezco: ayudando a las personas a conseguir la hipoteca adecuada, con la cobertura adecuada detrás.",
+           "Szia, Agnes vagyok. Az elmúlt 17+ évben a pénzügyi szolgáltatások szinte minden területén dolgoztam — jelzáloghitelek, nyugdíjak, befektetések, könyvelés, biztosítások — és útközben megtaláltam, hogy valójában hol a helyem: segíteni az embereknek a megfelelő jelzáloghitelt megtalálni, mögötte a megfelelő biztosítással.")}
+        {t("p", "Mortgages are one of the biggest financial decisions most of us ever make, and I don't think anyone should walk into that decision half-informed. So my approach leans heavily on education. When we work together, you'll understand your options, the trade-offs, and <em>why</em> we're recommending what we're recommending — not because I'll bury you in jargon, but because I'll explain the parts that matter and skip the parts that don't.",
+           "Eine Hypothek ist eine der größten finanziellen Entscheidungen, die die meisten von uns je treffen, und ich finde, niemand sollte diese Entscheidung halbinformiert treffen. Deshalb setzt mein Ansatz stark auf Aufklärung. Wenn wir zusammenarbeiten, werden Sie Ihre Optionen verstehen, die Abwägungen und <em>warum</em> wir empfehlen, was wir empfehlen — nicht weil ich Sie mit Fachjargon überschütte, sondern weil ich Ihnen das Wesentliche erkläre und den Rest weglasse.",
+           "La hipoteca es una de las decisiones financieras más importantes que la mayoría tomamos en la vida, y no creo que nadie deba entrar en esa decisión con información a medias. Por eso mi enfoque se apoya mucho en la educación. Cuando trabajamos juntos, entenderá sus opciones, los compromisos, y <em>por qué</em> recomendamos lo que recomendamos — no porque le abrume con jerga, sino porque le explicaré lo que importa y omitiré lo que no.",
+           "A jelzáloghitel egyike a legnagyobb pénzügyi döntéseknek, amelyeket életünk során hozunk, és úgy gondolom, senkinek sem szabadna félig informáltan belevágnia. Ezért a megközelítésem nagyrészt az oktatásra épít. Amikor együtt dolgozunk, meg fogja érteni a lehetőségeit, a kompromisszumokat, és azt is, hogy <em>miért</em> pont azt ajánljuk, amit ajánlunk — nem azért, mert szakzsargonnal árasztom el, hanem mert elmagyarázom, ami valóban számít, és kihagyom, ami nem.")}
+        {t("p", "As a whole-of-market broker, I'm not tied to any single lender. I have access to over 100 lenders — high street banks, specialist providers, and private options — which means I can match a mortgage to your circumstances rather than squeeze you into someone else's box. Whether you're buying your first home, remortgaging, expanding a portfolio, or arranging something more complex, we start with your situation and work outwards from there.",
+           "Als Whole-of-Market-Maklerin bin ich an keinen einzelnen Kreditgeber gebunden. Ich habe Zugang zu über 100 Kreditgebern — Großbanken, Spezialanbietern und Privatbanken — was bedeutet, dass ich eine Hypothek an Ihre Situation anpassen kann, statt Sie in eine fremde Schablone zu zwingen. Ob Sie Ihr erstes Zuhause kaufen, umschulden, ein Portfolio ausbauen oder etwas Komplexeres arrangieren — wir beginnen bei Ihrer Situation und arbeiten von dort aus weiter.",
+           "Como bróker de mercado completo, no estoy ligada a un único prestamista. Tengo acceso a más de 100 prestamistas — grandes bancos, proveedores especializados y opciones privadas — lo que significa que puedo ajustar la hipoteca a sus circunstancias, en lugar de encajarle en el molde de otro. Ya sea que esté comprando su primera vivienda, refinanciando, ampliando una cartera o gestionando algo más complejo, empezamos por su situación y construimos desde ahí.",
+           "Teljes piaci brókerként nem vagyok egyetlen hitelezőhöz kötve. Több mint 100 hitelezőhöz van hozzáférésem — nagybankokhoz, speciális szolgáltatókhoz és privát megoldásokhoz — ami azt jelenti, hogy a jelzáloghitelt az Ön körülményeihez igazítom, nem pedig Önt egy előre gyártott dobozba szorítom. Legyen szó első otthon vásárlásáról, refinanszírozásról, portfólió bővítéséről vagy valami összetettebbről, mindig az Ön helyzetéből indulunk ki, és onnan építkezünk.")}
+        {t("p", "I also feel strongly about protection. A mortgage keeps a roof over your head; protection keeps that roof there if life takes an unexpected turn — critical illness, long-term illness, loss of income, or worse. It's not the glamorous part of the conversation, but it's often the most important one.",
+           "Auch beim Thema Absicherung habe ich klare Überzeugungen. Eine Hypothek gibt Ihnen ein Dach über dem Kopf; eine Absicherung sorgt dafür, dass es dort bleibt, falls das Leben eine unerwartete Wendung nimmt — schwere Krankheit, langfristige Erkrankung, Einkommensverlust oder Schlimmeres. Es ist nicht der glamouröse Teil des Gesprächs, aber oft der wichtigste.",
+           "También creo firmemente en la protección. Una hipoteca le pone un techo sobre la cabeza; la protección se asegura de que ese techo siga ahí si la vida da un giro inesperado — enfermedad grave, enfermedad prolongada, pérdida de ingresos o algo peor. No es la parte glamurosa de la conversación, pero suele ser la más importante.",
+           "A biztosítás kérdése is fontos számomra. A jelzáloghitel tetőt biztosít a feje fölé; a biztosítás pedig azt biztosítja, hogy az a tető ott is maradjon, ha az élet váratlan fordulatot vesz — súlyos betegség, hosszú távú megbetegedés, jövedelemkiesés vagy még rosszabb esetén. Nem ez a beszélgetés csillogó része, de gyakran ez a legfontosabb.")}
+        {t("p", "My goal is simple: keep the process smooth, keep you informed at every step, and make sure you walk away with the right mortgage <em>and</em> the right cover for real peace of mind.",
+           "Mein Ziel ist einfach: den Prozess reibungslos halten, Sie in jedem Schritt informieren und dafür sorgen, dass Sie am Ende mit der richtigen Hypothek <em>und</em> der richtigen Absicherung nach Hause gehen — für echte Sicherheit.",
+           "Mi objetivo es sencillo: mantener el proceso fluido, mantenerle informado en cada paso, y asegurarme de que se marche con la hipoteca adecuada <em>y</em> la cobertura adecuada, para una verdadera tranquilidad.",
+           "A célom egyszerű: a folyamat legyen zökkenőmentes, Ön minden lépésnél tájékozott, és a végén valóban a megfelelő jelzáloghitellel <em>és</em> a megfelelő biztosítással távozzon — valódi lelki nyugalommal.")}
         <div class="badge-row">
-          <span class="badge">{ICON['shield']} CeMAP [QUALIFICATION]</span>
+          <span class="badge">{ICON['shield']} CeMAP 3</span>
           <span class="badge">{ICON['shield']} FCA 750470</span>
           <span class="badge">🌍 EN · DE · ES · HU</span>
         </div>
