@@ -1,17 +1,40 @@
+<!--
+  BLOG POST TEMPLATE — Agnes Mortgage
+  Filled by ABB publish.js at commit time. Tokens:
+    {{LANG}}                — 2-letter lang code (en/de/es/hu) — html lang + data-page-lang
+    {{TITLE}} {{DESCRIPTION}} {{SLUG}} {{DATE_ISO}} {{DATE_DISPLAY}} {{TAG}}
+    {{COVER_IMAGE}} / {{HERO_IMG}}  — hero image URL (aliases)
+    {{BODY_HTML}}  / {{CONTENT}}    — article body HTML (aliases)
+    {{CANONICAL_URL}}       — self-referencing per language (never points to another lang)
+    {{HREFLANG_TAGS}}       — full alternate cluster block (multi-line)
+    {{OG_LOCALE}}           — BCP-47 with underscore (en_GB, de_DE, es_ES, hu_HU)
+    {{OG_LOCALE_ALTERNATES}}— zero or more og:locale:alternate meta tags
+    {{LANG_BCP47}}          — BCP-47 with hyphen for JSON-LD inLanguage (en-GB, de-DE, etc.)
+    {{TAG_CRUMB}}           — either "<span>›</span><span>{tag}</span>" or empty
+    {{META_TAG_SEP}}         — either " · {tag}" or empty (post-meta separator)
+
+  The language switcher reads data-page-lang on <html> and — instead of swapping
+  chrome text in place — navigates to the alternate URL declared by the matching
+  <link rel="alternate" hreflang="…"> tag. So chrome, body, hreflang and canonical
+  always agree, and Google sees clean per-language pages.
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANG}}" data-page-lang="{{LANG}}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{TITLE}} | Agnes Mortgage</title>
 <meta name="description" content="{{DESCRIPTION}}">
-<link rel="canonical" href="https://agnesmortgage.co.uk/blog/posts/{{SLUG}}">
-<meta property="og:type" content="website">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+{{HREFLANG_TAGS}}
+<meta property="og:type" content="article">
 <meta property="og:title" content="{{TITLE}} | Agnes Mortgage">
 <meta property="og:description" content="{{DESCRIPTION}}">
-<meta property="og:url" content="https://agnesmortgage.co.uk/blog/posts/{{SLUG}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
 <meta property="og:image" content="{{COVER_IMAGE}}">
 <meta property="og:site_name" content="Agnes Mortgage">
+<meta property="og:locale" content="{{OG_LOCALE}}">
+{{OG_LOCALE_ALTERNATES}}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="GB">
 <meta name="geo.placename" content="United Kingdom">
@@ -25,9 +48,10 @@
 {"@context":"https://schema.org","@type":"Article","headline":"{{TITLE}}",
 "description":"{{DESCRIPTION}}","image":"{{COVER_IMAGE}}",
 "datePublished":"{{DATE_ISO}}","dateModified":"{{DATE_ISO}}",
+"inLanguage":"{{LANG_BCP47}}",
 "author":{"@type":"Organization","name":"Agnes Mortgage","url":"https://agnesmortgage.co.uk"},
 "publisher":{"@type":"Organization","name":"Agnes Mortgage","logo":{"@type":"ImageObject","url":"https://agnesmortgage.co.uk/img/apple-touch-icon.png"}},
-"mainEntityOfPage":"https://agnesmortgage.co.uk/blog/posts/{{SLUG}}"}
+"mainEntityOfPage":"{{CANONICAL_URL}}"}
 </script>
 </head>
 <body>
@@ -90,9 +114,9 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog">Insights</a><span>›</span><span>{{TAG}}</span></div>
+    <div class="breadcrumb"><a href="/" data-en="Home" data-de="Start" data-es="Inicio" data-hu="Kezdőlap">Home</a><span>›</span><a href="/blog" data-en="Insights" data-de="Insights" data-es="Blog" data-hu="Blog">Insights</a>{{TAG_CRUMB}}</div>
     <h1>{{TITLE}}</h1>
-    <p class="post-meta" style="color:rgba(255,255,255,.7)">{{DATE_DISPLAY}} · {{TAG}} · Agnes Mortgage</p>
+    <p class="post-meta" style="color:rgba(255,255,255,.7)">{{DATE_DISPLAY}}{{META_TAG_SEP}} · Agnes Mortgage</p>
   </div>
 </section>
 <section class="section" style="padding-top:56px">
@@ -103,9 +127,9 @@
     </div>
     <div style="max-width:780px;margin:40px auto 0">
       <div class="band-dark">
-        <h2>Talk this through with a broker</h2>
-        <p>Every article generalises; your case is specific. A private consultation costs nothing and commits you to nothing.</p>
-        <a href="/#contact" class="btn btn-gold">Request a consultation <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <h2 data-en="Talk this through with a broker" data-de="Besprechen Sie das mit einem Makler" data-es="Coméntelo con un bróker" data-hu="Beszélje meg egy brókerrel">Talk this through with a broker</h2>
+        <p data-en="Every article generalises; your case is specific. A private consultation costs nothing and commits you to nothing." data-de="Jeder Artikel verallgemeinert; Ihr Fall ist individuell. Ein vertrauliches Beratungsgespräch ist kostenlos und unverbindlich." data-es="Todo artículo generaliza; su caso es específico. Una consulta privada no cuesta nada y no le compromete a nada." data-hu="Minden cikk általánosít; az Ön esete egyedi. A privát konzultáció ingyenes és semmire sem kötelezi.">Every article generalises; your case is specific. A private consultation costs nothing and commits you to nothing.</p>
+        <a href="/#contact" class="btn btn-gold"><span data-en="Request a consultation" data-de="Beratung anfragen" data-es="Solicitar una consulta" data-hu="Konzultáció kérése">Request a consultation</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
