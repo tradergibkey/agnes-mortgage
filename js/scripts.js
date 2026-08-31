@@ -17,7 +17,31 @@
     return LANGS.indexOf(saved) !== -1 ? saved : null;
   }
 
-  function applyLang(lang) {
+  /* Page-level language lock: pages whose BODY text is written in one fixed
+     language (translated blog posts, per-language blog indexes) carry
+     data-page-lang on <html>. On those pages the switcher navigates instead
+     of swapping text, so chrome and body can never disagree. */
+  function pageLang() {
+    var pl = document.documentElement.getAttribute("data-page-lang");
+    return LANGS.indexOf(pl) !== -1 ? pl : null;
+  }
+
+  /* Which translations exist is declared by the hreflang tags in <head>.
+     No probing, no network call — absent tag means no translation. */
+  function altHref(lang) {
+    var el = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+    return el ? el.getAttribute("href") : null;
+  }
+
+  function gotoLang(lang) {
+    if (LANGS.indexOf(lang) === -1) return;
+    try { localStorage.setItem("am-lang", lang); } catch (e) {}
+    var href = altHref(lang);
+    if (!href) href = (lang === "en") ? "/blog" : "/blog/" + lang;
+    window.location.href = href;
+  }
+
+  function applyLang(lang, persist) {
     if (LANGS.indexOf(lang) === -1) lang = "en";
     document.documentElement.setAttribute("lang", lang);
     document.querySelectorAll("[data-" + lang + "]").forEach(function (el) {
@@ -38,12 +62,28 @@
       tmp.innerHTML = FLAG_SVG[lang];
       flagSlot.replaceWith(tmp.firstChild);
     }
-    try { localStorage.setItem("am-lang", lang); } catch (e) {}
+    if (persist !== false) {
+      try { localStorage.setItem("am-lang", lang); } catch (e) {}
+    }
   }
 
   function initLang() {
     var gate = document.getElementById("langGate");
+    var fixed = pageLang();
     var saved = currentLang();
+
+    if (fixed) {
+      /* Fixed-language page. Never show the gate — a visitor arriving from
+         search on a German article must not be asked to pick a language.
+         Render chrome in the PAGE language so it matches the body, but do
+         not overwrite an existing site-wide preference. */
+      if (gate) gate.classList.add("hidden");
+      applyLang(fixed, false);
+      if (!saved) { try { localStorage.setItem("am-lang", fixed); } catch (e) {} }
+      initLangSwitch(gotoLang);
+      return;
+    }
+
     if (saved) {
       if (gate) gate.classList.add("hidden");
       applyLang(saved);
@@ -58,20 +98,27 @@
     } else {
       applyLang("en");
     }
+    initLangSwitch(applyLang);
+  }
+
+  /* handler is applyLang on data-attribute pages, gotoLang on fixed-language pages */
+  function initLangSwitch(handler) {
     var sw = document.querySelector(".lang-switch");
-    if (sw) {
-      sw.querySelector(".lang-btn").addEventListener("click", function (e) {
+    if (!sw) return;
+    var btn = sw.querySelector(".lang-btn");
+    if (btn) {
+      btn.addEventListener("click", function (e) {
         e.stopPropagation();
         sw.classList.toggle("open");
       });
-      sw.querySelectorAll(".lang-menu button").forEach(function (b) {
-        b.addEventListener("click", function () {
-          applyLang(b.getAttribute("data-lang"));
-          sw.classList.remove("open");
-        });
-      });
-      document.addEventListener("click", function () { sw.classList.remove("open"); });
     }
+    sw.querySelectorAll(".lang-menu button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        handler(b.getAttribute("data-lang"));
+        sw.classList.remove("open");
+      });
+    });
+    document.addEventListener("click", function () { sw.classList.remove("open"); });
   }
 
   /* ---------- Header ---------- */
