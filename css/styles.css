@@ -36,7 +36,8 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+/* scroll-padding keeps #anchor targets clear of the fixed 74px header */
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px)}
 body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -56,10 +57,10 @@ h3{font-size:1.28rem}
 /* ---------- Header ---------- */
 .site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:1000;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(227,231,240,.8);transition:box-shadow .25s}
 .site-header.scrolled{box-shadow:var(--shadow)}
-.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-size:1.32rem;font-weight:700;color:var(--navy-800)}
-.brand-mark{width:40px;height:40px;border-radius:10px;background:var(--grad-navy);color:var(--gold-400);display:grid;place-items:center;font-size:1rem;font-weight:700;font-family:var(--font-display);letter-spacing:.5px}
-.brand small{display:block;font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-600);line-height:1}
+.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;min-width:0}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-size:1.32rem;font-weight:700;color:var(--navy-800);min-width:0;white-space:nowrap}
+.brand-mark{width:40px;height:40px;border-radius:10px;background:var(--grad-navy);color:var(--gold-400);display:grid;place-items:center;font-size:1rem;font-weight:700;font-family:var(--font-display);letter-spacing:.5px;flex:0 0 auto}
+.brand small{display:block;font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-600);line-height:1;white-space:nowrap}
 
 .main-nav{display:flex;align-items:center;gap:6px}
 .main-nav>li{position:relative}
@@ -194,7 +195,7 @@ h3{font-size:1.28rem}
 
 /* ---------- Contact ---------- */
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
-.contact-info-card{background:var(--grad-navy);color:#fff;border-radius:var(--radius);padding:38px;position:sticky;top:calc(var(--header-h) + 24px)}
+.contact-info-card{background:var(--grad-navy);color:#fff;border-radius:var(--radius);padding:38px;position:sticky;top:calc(var(--header-h) + 24px);min-width:0}
 .contact-info-card h3{color:#fff;margin-bottom:18px}
 .contact-line{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
 .contact-line:last-of-type{border-bottom:none}
@@ -204,14 +205,16 @@ h3{font-size:1.28rem}
 .wa-btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:13px 22px;border-radius:11px;background:#1EBE5D;color:#fff;font-weight:700;font-size:.92rem;transition:transform .15s}
 .wa-btn:hover{transform:translateY(-2px)}
 
-.form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow);min-width:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:0}
+.form-field{min-width:0}
 .form-field{display:flex;flex-direction:column;gap:6px}
 .form-field.full{grid-column:1/-1}
 .form-field label{font-size:.84rem;font-weight:700;color:var(--navy-800)}
 .form-field input,.form-field select,.form-field textarea{padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body);font-size:.94rem;background:var(--bg);color:var(--ink);transition:border-color .18s}
 .form-field select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23101A2E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:40px}
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--gold-500)}
+.form-field input:focus-visible,.form-field select:focus-visible,.form-field textarea:focus-visible{outline:3px solid var(--gold-500);outline-offset:1px}
 .form-consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);grid-column:1/-1}
 .form-consent input{margin-top:3px}
 .hp-field{position:absolute;left:-9999px;opacity:0}
@@ -239,9 +242,15 @@ h3{font-size:1.28rem}
 .footer-legal{border-top:1px solid rgba(255,255,255,.1);padding:26px 0 36px;font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.7}
 .footer-legal .risk{display:block;margin-top:14px;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.75);text-transform:uppercase}
 
-/* ---------- Reveal ---------- */
-.reveal-item{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal-item.revealed{opacity:1;transform:none}
+/* ---------- Reveal ----------
+   The scroll reveal is driven by IntersectionObserver in scripts.js. Two
+   safety nets so content can never stay invisible: an instant unhide when
+   scripting is off, and a delayed keyframe that forces visibility if the
+   script never runs (blocked, failed to load, JS error before init). */
+@keyframes reveal-safety{to{opacity:1;transform:none}}
+.reveal-item{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;animation:reveal-safety .4s ease 8s forwards}
+.reveal-item.revealed{opacity:1;transform:none;animation:none}
+@media(scripting:none){.reveal-item{opacity:1;transform:none;animation:none}}
 
 /* ---------- 404 ---------- */
 .notfound{min-height:100vh;display:grid;place-items:center;background:var(--grad-navy);color:#fff;text-align:center;padding:24px}
@@ -255,8 +264,12 @@ h3{font-size:1.28rem}
 .post-body h3{margin:28px 0 10px}
 .post-body p{color:var(--ink);margin-bottom:16px}
 .post-body ul{list-style:disc;padding-left:22px;margin-bottom:16px;color:var(--ink)}
-.post-body img{border-radius:var(--radius);margin:26px 0}
-.post-hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);margin:-46px auto 40px;max-width:900px;position:relative;z-index:2}
+/* ABB serves every article image from Pexels at 940x650. Reserving that ratio
+   keeps the page from reflowing as the remote images arrive (CLS). */
+.post-body img{border-radius:var(--radius);margin:26px 0;width:100%;aspect-ratio:940/650;object-fit:cover;background:var(--line)}
+.post-body .author-byline img{width:48px;aspect-ratio:1;margin:0;border-radius:50%;background:none}
+.post-hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);margin:-46px auto 40px;max-width:900px;position:relative;z-index:2;aspect-ratio:940/650;background:var(--line)}
+.post-hero-img img{width:100%;height:100%;object-fit:cover}
 
 /* ---------- Responsive ---------- */
 @media(max-width:1024px){
@@ -288,10 +301,34 @@ h3{font-size:1.28rem}
   .hero-stats{gap:24px}
   .footer-grid{grid-template-columns:1fr}
   .lang-gate-grid{grid-template-columns:1fr}
+  /* 38px of padding on both sides left too little room on narrow phones and
+     pushed these cards wider than their grid track */
+  .contact-info-card,.form-card{padding:26px 22px}
+  .calc-inputs,.calc-result{padding:26px 22px}
+}
+@media(max-width:600px){
+  /* the uppercase tagline needs ~190px on one line; below this it wrapped
+     and pushed the brand block out of the 74px header */
+  .brand small{display:none}
+  .brand{font-size:1.18rem}
 }
 @media(max-width:720px){
   .hero-media video{display:none}
 }
+
+/* ---------- Motion & focus ---------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal-item{opacity:1;transform:none;animation:none}
+  .marquee-track{animation:none}
+  .card:hover,.btn:hover,.wa-btn:hover,.lang-gate-grid button:hover{transform:none}
+}
+/* keyboard focus ring — mouse clicks keep the quiet look via :focus-visible */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;border-radius:6px}
+.hero a:focus-visible,.band-dark a:focus-visible,.site-footer a:focus-visible,.page-hero a:focus-visible{outline-color:var(--gold-300)}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:4000;padding:12px 20px;background:var(--navy-900);color:#fff;font-weight:700;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}
 
 /* ---------- Calculators ---------- */
 .calc-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
@@ -308,6 +345,8 @@ h3{font-size:1.28rem}
 .calc-field>label output{font-family:var(--font-display);font-size:1.05rem;color:var(--gold-600)}
 .calc-field input[type=number]{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body);font-size:1rem;background:var(--bg);color:var(--ink)}
 .calc-field input[type=number]:focus{outline:none;border-color:var(--gold-500)}
+.calc-field input[type=number]:focus-visible{outline:3px solid var(--gold-500);outline-offset:1px}
+.calc-field input[type=range]:focus-visible{outline:3px solid var(--gold-500);outline-offset:4px}
 .calc-field input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:linear-gradient(to right,var(--gold-500) 0%,var(--gold-500) var(--fill,50%),var(--line) var(--fill,50%),var(--line) 100%);outline:none;margin-top:4px}
 .calc-field input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--grad-navy);border:3px solid var(--gold-400);cursor:pointer;box-shadow:0 2px 8px rgba(11,24,48,.3)}
 .calc-field input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--navy-800);border:3px solid var(--gold-400);cursor:pointer}
