@@ -109,16 +109,21 @@
     if (btn) {
       btn.addEventListener("click", function (e) {
         e.stopPropagation();
-        sw.classList.toggle("open");
+        var open = sw.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
       });
     }
     sw.querySelectorAll(".lang-menu button").forEach(function (b) {
       b.addEventListener("click", function () {
         handler(b.getAttribute("data-lang"));
         sw.classList.remove("open");
+        if (btn) btn.setAttribute("aria-expanded", "false");
       });
     });
-    document.addEventListener("click", function () { sw.classList.remove("open"); });
+    document.addEventListener("click", function () {
+      sw.classList.remove("open");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
   }
 
   /* ---------- Header ---------- */
@@ -133,8 +138,10 @@
     var nav = document.querySelector(".main-nav");
     if (burger && nav) {
       burger.addEventListener("click", function () {
-        burger.classList.toggle("open");
-        nav.classList.toggle("open");
+        var open = !burger.classList.contains("open");
+        burger.classList.toggle("open", open);
+        nav.classList.toggle("open", open);
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
       });
     }
     document.querySelectorAll(".nav-item-drop").forEach(function (item) {
@@ -143,13 +150,54 @@
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         document.querySelectorAll(".nav-item-drop.open").forEach(function (o) {
-          if (o !== item) o.classList.remove("open");
+          if (o !== item) {
+            o.classList.remove("open");
+            var t = o.querySelector(".drop-toggle");
+            if (t) t.setAttribute("aria-expanded", "false");
+          }
         });
-        item.classList.toggle("open");
+        var open = item.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
     });
     document.addEventListener("click", function () {
-      document.querySelectorAll(".nav-item-drop.open").forEach(function (o) { o.classList.remove("open"); });
+      document.querySelectorAll(".nav-item-drop.open").forEach(function (o) {
+        o.classList.remove("open");
+        var t = o.querySelector(".drop-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+    });
+    /* Escape closes whatever is open, and the burger drawer too */
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      document.querySelectorAll(".nav-item-drop.open").forEach(function (o) {
+        o.classList.remove("open");
+        var t = o.querySelector(".drop-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+      var sw = document.querySelector(".lang-switch.open");
+      if (sw) {
+        sw.classList.remove("open");
+        var lb = sw.querySelector(".lang-btn");
+        if (lb) lb.setAttribute("aria-expanded", "false");
+      }
+      if (burger && burger.classList.contains("open")) {
+        burger.classList.remove("open");
+        if (nav) nav.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+        burger.focus();
+      }
+    });
+  }
+
+  /* Footer copyright should not go stale on 1 January */
+  function initYear() {
+    var y = new Date().getFullYear();
+    if (y <= 2026) return;
+    document.querySelectorAll(".footer-legal p").forEach(function (p) {
+      if (p.textContent.indexOf("© 2026") !== -1) {
+        p.textContent = p.textContent.replace("© 2026", "© 2026–" + y);
+      }
     });
   }
 
@@ -193,11 +241,14 @@
         document.querySelectorAll(".faq-item.open").forEach(function (o) {
           o.classList.remove("open");
           o.querySelector(".faq-a").style.maxHeight = null;
+          var oq = o.querySelector(".faq-q");
+          if (oq) oq.setAttribute("aria-expanded", "false");
         });
         if (!open) {
           item.classList.add("open");
           a.style.maxHeight = a.scrollHeight + "px";
         }
+        q.setAttribute("aria-expanded", !open ? "true" : "false");
       });
     });
   }
@@ -212,6 +263,15 @@
   }
 
   /* ---------- Web3Forms contact ---------- */
+  /* The confirmation the visitor reads should be in the language they are
+     reading the page in, so the status carries data-ok-{lang}/data-err-{lang}
+     alongside the English default. */
+  function msg(el, kind) {
+    var lang = pageLang() || currentLang() || "en";
+    return (lang !== "en" && el.getAttribute("data-" + kind + "-" + lang)) ||
+           el.getAttribute("data-" + kind);
+  }
+
   function initForm() {
     var form = document.getElementById("contactForm");
     if (!form) return;
@@ -227,12 +287,12 @@
       }).then(function (r) { return r.json(); }).then(function (data) {
         if (data.success) {
           status.classList.add("ok");
-          status.textContent = status.getAttribute("data-ok") || "Thank you — we will be in touch shortly.";
+          status.textContent = msg(status, "ok") || "Thank you — we will be in touch shortly.";
           form.reset();
         } else { throw new Error(); }
       }).catch(function () {
         status.classList.add("err");
-        status.textContent = status.getAttribute("data-err") || "Something went wrong. Please try again or call us.";
+        status.textContent = msg(status, "err") || "Something went wrong. Please try again or call us.";
       }).finally(function () { btn.disabled = false; });
     });
   }
@@ -245,5 +305,6 @@
     initFaq();
     initHeroVideo();
     initForm();
+    initYear();
   });
 })();

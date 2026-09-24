@@ -1,19 +1,714 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://agnesmortgage.co.uk</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/buy-to-let</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/hmo-finance</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/expat-mortgages</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/self-employed</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/high-net-worth</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/contractors</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/residential</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/remortgage</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/calculators</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/about</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/blog</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/privacy-policy</loc><lastmod>2026-07-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/terms</loc><lastmod>2026-07-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/blog/posts/limited-company-buy-to-let-2026</loc><lastmod>2026-07-01</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://agnesmortgage.co.uk/blog/posts/uk-mortgage-living-abroad-expat-guide</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://agnesmortgage.co.uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/buy-to-let</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/hmo-finance</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/expat-mortgages</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/self-employed</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/high-net-worth</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/contractors</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/residential</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/remortgage</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/calculators</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/about</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/privacy-policy</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/terms</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/es"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/de</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/es"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/es</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/es"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/hu</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/es"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/hu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-licencing-and-mortgage-eligibility-what-you-need-to-know-before-you-apply"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/buying-a-property-to-convert-into-an-hmo-bridging-finance-vs-buy-to-let-mortgage"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-a-large-hmo-7-bedrooms-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/hmo-mortgage-requirements-what-lenders-look-for-before-they-approve"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/contractor-mortgages-using-your-day-rate-instead-of-payslips-to-qualify"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/can-you-use-retained-profits-to-get-a-larger-mortgage-as-a-company-director"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/why-self-employed-mortgage-applications-get-rejected-and-how-to-fix-them"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/director-mortgages-how-lenders-assess-salary-plus-dividends-in-2025"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/one-year-of-accounts-can-you-get-a-self-employed-mortgage-in-the-uk"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-for-expats-paid-in-foreign-currency-how-it-works"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/de/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/es/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/hu/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://agnesmortgage.co.uk/blog/posts/de/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agnesmortgage.co.uk/blog/posts/es/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://agnesmortgage.co.uk/blog/posts/hu/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/2-year-vs-5-year-fixed-rate-mortgage-in-2026-how-to-choose"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/btl-or-hmo-which-property-investment-strategy-is-right-for-you</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/btl-or-hmo-which-property-investment-strategy-is-right-for-you"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/btl-or-hmo-which-property-investment-strategy-is-right-for-you"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/can-a-non-uk-resident-get-a-buy-to-let-mortgage-in-the-uk-expat-vs-foreign-natio</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/can-a-non-uk-resident-get-a-buy-to-let-mortgage-in-the-uk-expat-vs-foreign-natio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/can-a-non-uk-resident-get-a-buy-to-let-mortgage-in-the-uk-expat-vs-foreign-natio"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/uk-expat-buy-to-let-mortgages-which-lenders-accept-overseas-income</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-expat-buy-to-let-mortgages-which-lenders-accept-overseas-income"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-expat-buy-to-let-mortgages-which-lenders-accept-overseas-income"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/getting-a-uk-mortgage-as-a-foreign-national-what-lenders-actually-require</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/getting-a-uk-mortgage-as-a-foreign-national-what-lenders-actually-require"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/getting-a-uk-mortgage-as-a-foreign-national-what-lenders-actually-require"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/uk-expat-mortgage-guide-how-to-buy-property-in-the-uk-while-living-abroad</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-expat-mortgage-guide-how-to-buy-property-in-the-uk-while-living-abroad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-expat-mortgage-guide-how-to-buy-property-in-the-uk-while-living-abroad"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/mortgage-portfolio-restructuring-how-to-unlock-equity-across-your-properties</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/mortgage-portfolio-restructuring-how-to-unlock-equity-across-your-properties"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/mortgage-portfolio-restructuring-how-to-unlock-equity-across-your-properties"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/how-to-finance-your-4th-buy-to-let-when-high-street-banks-say-no</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-your-4th-buy-to-let-when-high-street-banks-say-no"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-to-finance-your-4th-buy-to-let-when-high-street-banks-say-no"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/limited-company-vs-personal-name-for-uk-rental-properties-a-portfolio-landlord-s</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/limited-company-vs-personal-name-for-uk-rental-properties-a-portfolio-landlord-s"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/limited-company-vs-personal-name-for-uk-rental-properties-a-portfolio-landlord-s"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/top-lender-stress-test-rates-for-portfolio-landlords-in-2025-a-head-to-head-comp</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/top-lender-stress-test-rates-for-portfolio-landlords-in-2025-a-head-to-head-comp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/top-lender-stress-test-rates-for-portfolio-landlords-in-2025-a-head-to-head-comp"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/how-offshore-trusts-affect-uk-mortgage-applications-a-step-by-step-guide</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-offshore-trusts-affect-uk-mortgage-applications-a-step-by-step-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-offshore-trusts-affect-uk-mortgage-applications-a-step-by-step-guide"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/how-portfolio-landlords-can-remortgage-across-multiple-properties-at-once</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/how-portfolio-landlords-can-remortgage-across-multiple-properties-at-once"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/how-portfolio-landlords-can-remortgage-across-multiple-properties-at-once"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/limited-company-buy-to-let-2026</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/limited-company-buy-to-let-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/limited-company-buy-to-let-2026"/>
+  </url>
+  <url>
+    <loc>https://agnesmortgage.co.uk/blog/posts/uk-mortgage-living-abroad-expat-guide</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-living-abroad-expat-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agnesmortgage.co.uk/blog/posts/uk-mortgage-living-abroad-expat-guide"/>
+  </url>
 </urlset>

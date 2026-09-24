@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /blog/post-template
 
 Sitemap: https://agnesmortgage.co.uk/sitemap.xml
 Llms-txt: https://agnesmortgage.co.uk/llms.txt
