@@ -225,8 +225,35 @@ function injectAnalytics() {
   console.log(`Vercel Analytics injected into ${n} file(s)`);
 }
 
+/* ---------- strip internal files from the deploy ---------- */
+/* These build tools and notes must stay in the GitHub repo (regeneration
+ * needs them) but must NOT be publicly served. Vercel deploys the working
+ * directory AFTER this build runs, so deleting them here removes them from
+ * the deployment without touching the repo. Replaces .vercelignore, which
+ * a dotfile drag-and-drop upload silently drops. */
+const INTERNAL = [
+  "README-DEPLOY.md",
+  "STATE-agnes-mortgage.md",
+  "_gen_common.py",
+  "_gen_extra.py",
+  "_gen_pages.py",
+  "local-server.py",
+  ".vercelignore",
+];
+function stripInternal() {
+  let n = 0;
+  for (const name of INTERNAL) {
+    const p = path.join(__dirname, name);
+    try {
+      if (fs.existsSync(p)) { fs.unlinkSync(p); n++; }
+    } catch (e) { console.log("stripInternal: could not remove " + name + " — " + e.message); }
+  }
+  console.log(`Internal files stripped from deploy: ${n}`);
+}
+
 /* ---------- run ---------- */
 const posts = getPosts();
 buildSitemap(posts);
 injectAnalytics();
+stripInternal();
 console.log("build-sitemap.js DONE");
