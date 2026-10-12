@@ -93,6 +93,7 @@
         b.addEventListener("click", function () {
           applyLang(b.getAttribute("data-lang"));
           gate.classList.add("hidden");
+          maybeShowBanner();
         });
       });
     } else {
@@ -286,6 +287,13 @@
         body: new FormData(form)
       }).then(function (r) { return r.json(); }).then(function (data) {
         if (data.success) {
+          if (window.gtag) {
+            var topicEl = form.querySelector("[name=topic]");
+            window.gtag("event", "generate_lead", {
+              form_id: "contact",
+              topic: topicEl ? topicEl.value : ""
+            });
+          }
           status.classList.add("ok");
           status.textContent = msg(status, "ok") || "Thank you — we will be in touch shortly.";
           form.reset();
@@ -297,6 +305,70 @@
     });
   }
 
+  /* ---------- Cookie consent banner (GA4 Consent Mode v2) ---------- */
+  /* Analytics stays denied (set in gtag-init.js) until Accept. The banner
+     text matches the language the visitor is reading, and it never shows
+     at the same time as the first-visit language gate. */
+  var BANNER = {
+    en: { text: "We use cookies to measure site traffic and improve your experience. Analytics cookies are only set if you accept.", accept: "Accept", reject: "Reject", privacy: "Privacy policy" },
+    de: { text: "Wir verwenden Cookies, um die Websitenutzung zu messen und Ihr Erlebnis zu verbessern. Analyse-Cookies werden nur mit Ihrer Zustimmung gesetzt.", accept: "Akzeptieren", reject: "Ablehnen", privacy: "Datenschutz" },
+    es: { text: "Usamos cookies para medir el tráfico del sitio y mejorar su experiencia. Las cookies de analítica solo se activan si las acepta.", accept: "Aceptar", reject: "Rechazar", privacy: "Política de privacidad" },
+    hu: { text: "Sütiket használunk a forgalom méréséhez és az élmény javításához. Analitikai sütik csak az Ön hozzájárulásával aktiválódnak.", accept: "Elfogadom", reject: "Elutasítom", privacy: "Adatvédelem" }
+  };
+  function bannerLang() {
+    var l = pageLang() || currentLang() || "en";
+    return BANNER[l] ? l : "en";
+  }
+  function setConsent(granted) {
+    try { localStorage.setItem("am-consent", granted ? "granted" : "denied"); } catch (e) {}
+    if (granted && window.gtag) {
+      window.gtag("consent", "update", { analytics_storage: "granted" });
+    }
+    var b = document.getElementById("cookieBanner");
+    if (b) b.classList.add("hidden");
+  }
+  function buildBanner() {
+    if (document.getElementById("cookieBanner")) return;
+    var t = BANNER[bannerLang()];
+    var bar = document.createElement("div");
+    bar.id = "cookieBanner";
+    bar.className = "cookie-banner";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-label", "Cookie consent");
+    var p = document.createElement("p");
+    p.className = "cookie-text";
+    p.textContent = t.text + " ";
+    var a = document.createElement("a");
+    a.href = "/privacy-policy";
+    a.textContent = t.privacy;
+    p.appendChild(a);
+    var actions = document.createElement("div");
+    actions.className = "cookie-actions";
+    var reject = document.createElement("button");
+    reject.type = "button";
+    reject.className = "btn btn-ghost btn-sm";
+    reject.textContent = t.reject;
+    reject.addEventListener("click", function () { setConsent(false); });
+    var accept = document.createElement("button");
+    accept.type = "button";
+    accept.className = "btn btn-gold btn-sm";
+    accept.textContent = t.accept;
+    accept.addEventListener("click", function () { setConsent(true); });
+    actions.appendChild(reject);
+    actions.appendChild(accept);
+    bar.appendChild(p);
+    bar.appendChild(actions);
+    document.body.appendChild(bar);
+  }
+  function maybeShowBanner() {
+    var choice = null;
+    try { choice = localStorage.getItem("am-consent"); } catch (e) {}
+    if (choice === "granted" || choice === "denied") return;
+    var gate = document.getElementById("langGate");
+    if (gate && !gate.classList.contains("hidden")) return; /* wait for language pick */
+    buildBanner();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
     initHeader();
@@ -306,5 +378,6 @@
     initHeroVideo();
     initForm();
     initYear();
+    maybeShowBanner();
   });
 })();

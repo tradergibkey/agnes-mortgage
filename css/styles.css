@@ -365,3 +365,30 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .calc-note{font-size:.76rem;color:rgba(255,255,255,.5);margin-top:18px;position:relative;z-index:1}
 .calc-cta{margin-top:22px;position:relative;z-index:1}
 @media(max-width:900px){.calc-grid{grid-template-columns:1fr}.calc-result{position:relative}}
+
+/* ============================================================
+   Cookie consent banner (GA4 Consent Mode v2)
+   ============================================================ */
+.cookie-banner{
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:1200;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  max-width:1080px;margin:0 auto;
+  background:var(--grad-navy);color:#fff;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);
+  padding:16px 20px;
+  box-shadow:var(--shadow-lg);
+  animation:cookieIn .35s ease-out both;
+}
+@keyframes cookieIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cookie-banner{animation:none}}
+.cookie-banner.hidden{display:none}
+.cookie-text{margin:0;flex:1 1 320px;min-width:0;font-size:.9rem;line-height:1.5;color:rgba(255,255,255,.9)}
+.cookie-text a{color:var(--gold-300);text-decoration:underline;white-space:nowrap}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0}
+.cookie-actions .btn{cursor:pointer}
+@media (max-width:560px){
+  .cookie-banner{flex-direction:column;align-items:stretch;gap:14px;padding:16px}
+  .cookie-actions{justify-content:flex-end}
+  .cookie-actions .btn{flex:1}
+}

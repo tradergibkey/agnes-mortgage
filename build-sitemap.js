@@ -225,6 +225,25 @@ function injectAnalytics() {
   console.log(`Vercel Analytics injected into ${n} file(s)`);
 }
 
+/* ---------- Google Analytics 4 injection (idempotent) ---------- */
+/* One shared script in <head> on every page. Keeping it here (not hand-
+ * written into each file) means future ABB posts get GA automatically.
+ * gtag-init.js sets Consent Mode defaults (analytics denied) before it
+ * loads gtag.js; the cookie banner in scripts.js grants consent. */
+const GTAG_TAG = `<script src="/js/gtag-init.js"></script>`;
+function injectGtag() {
+  let n = 0;
+  for (const file of walk(__dirname)) {
+    let html = fs.readFileSync(file, "utf8");
+    if (html.includes("/js/gtag-init.js")) continue;
+    if (!html.includes("</head>")) continue;
+    html = html.replace("</head>", `${GTAG_TAG}\n</head>`);
+    fs.writeFileSync(file, html);
+    n++;
+  }
+  console.log(`GA4 tag injected into ${n} file(s)`);
+}
+
 /* ---------- strip internal files from the deploy ---------- */
 /* These build tools and notes must stay in the GitHub repo (regeneration
  * needs them) but must NOT be publicly served. Vercel deploys the working
@@ -255,5 +274,6 @@ function stripInternal() {
 const posts = getPosts();
 buildSitemap(posts);
 injectAnalytics();
+injectGtag();
 stripInternal();
 console.log("build-sitemap.js DONE");
